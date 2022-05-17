@@ -29,3 +29,10 @@ command: tanzu.liveUpdateStart
 ```
 
 The Tiltfile script is going to deploy our application into our development environment, and it will take about 2.5 minutes to run to completion the first time. But don't worry! It is setting us up to run iterative deployments that will be much, much faster.
+
+
+If you want to stop an auto update, Click to run below command:
+
+```editor:execute-command
+command: tanzu.liveUpdateStop
+```

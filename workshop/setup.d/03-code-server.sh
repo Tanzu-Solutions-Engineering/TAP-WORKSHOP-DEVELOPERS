@@ -6,7 +6,8 @@ cat <<'EOF' > /home/eduk8s/.local/share/code-server/User/settings.json
 {
     "redhat.telemetry.enabled": false,
     "java.server.launchMode": "Standard",
-    "tanzu.sourceImage": "$REGISTRY_HOST/tap11/build-service/spring-sensors-source",
+    "tanzu.sourceImage": "$REGISTRY_HOST/tap11/build-service/partnertapdemo-source",
+    "tanzu.namespace": "$SESSION_NAME",
     "terminal.integrated.automationShell.linux": "/bin/bash",
     "workbench.startupEditor": "none",
     "update.showReleaseNotes": false,
@@ -29,7 +30,7 @@ set -eo pipefail
 
 CODE_SERVER_BIND_ADDRESS=${CODE_SERVER_BIND_ADDRESS:-127.0.0.1}
 
-EDITOR_HOME=${EDITOR_HOME:-/home/eduk8s/spring-sensors}
+EDITOR_HOME=${EDITOR_HOME:-/home/eduk8s/partnertapdemo}
 
 exec /opt/code-server/bin/code-server \
     --bind-addr "$CODE_SERVER_BIND_ADDRESS:10085" \
