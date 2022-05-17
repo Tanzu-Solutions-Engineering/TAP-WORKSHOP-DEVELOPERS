@@ -16,8 +16,8 @@ spec:
       maximum: 10
   workshops:
     - name: tap-overview
-      expires: 60m
-      orphaned: 20m
+      expires: 500m
+      orphaned: 60m
       capacity: 20
       reserved: 2
     - name: tap-development
