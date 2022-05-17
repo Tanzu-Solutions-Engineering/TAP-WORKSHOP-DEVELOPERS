@@ -24,7 +24,7 @@ spec:
   #      value: #@ data.values.gitea.adminPassword
       - name: VIEW_CLUSTER_DOMAIN
         value: tap11.tanzupartnerdemo.com
-      - name: REGISTRY_HOST
+      - name: TAP_REGISTRY_HOST
         value: tanzudemoreg.azurecr.io
   #    - name: HARBOR_USER
   #      value: #@ data.values.harbor.user
@@ -58,28 +58,28 @@ spec:
         kind: ClusterRoleBinding
         metadata:
           name: $(session_namespace)-workshop-read-crb
-          namespace: $(session_namespace)
+          namespace: default
         roleRef:
           apiGroup: rbac.authorization.k8s.io
           kind: ClusterRole
           name: k8s-reader
         subjects:
           - kind: ServiceAccount
-            namespace: $(workshop_namespace)
+            namespace: default
             name: $(service_account)
 
       - apiVersion: rbac.authorization.k8s.io/v1
         kind: ClusterRoleBinding
         metadata:
           name: $(session_namespace)-workshop-rw-crb
-          namespace: $(session_namespace)
+          namespace: default
         roleRef:
           apiGroup: rbac.authorization.k8s.io
           kind: ClusterRole
           name: workshop-cluster-role
         subjects:
           - kind: ServiceAccount
-            namespace: $(workshop_namespace)
+            namespace: default
             name: $(service_account)
 
       # Permissions for session user
@@ -87,26 +87,26 @@ spec:
         kind: ClusterRoleBinding
         metadata:
           name: $(session_namespace)-session-read-crb
-          namespace: $(session_namespace)
+          namespace: default
         roleRef:
           apiGroup: rbac.authorization.k8s.io
           kind: ClusterRole
           name: k8s-reader
         subjects:
           - kind: ServiceAccount
-            namespace: $(session_namespace)
+            namespace: default
             name: default
 
       - apiVersion: rbac.authorization.k8s.io/v1
         kind: ClusterRoleBinding
         metadata:
           name: $(session_namespace)-session-rw-crb
-          namespace: $(session_namespace)
+          namespace: default
         roleRef:
           apiGroup: rbac.authorization.k8s.io
           kind: ClusterRole
           name: workshop-cluster-role
         subjects:
           - kind: ServiceAccount
-            namespace: $(session_namespace)
+            namespace: default
             name: default

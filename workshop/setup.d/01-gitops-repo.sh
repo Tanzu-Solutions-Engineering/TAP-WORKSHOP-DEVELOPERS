@@ -1,6 +1,6 @@
 #!/bin/bash
-set -x
-set +e
+# set -x
+# set +e
 
 # export REPO_NAME=$SESSION_NAMESPACE-$(date +%s)
 # echo $REPO_NAME > repo.txt
