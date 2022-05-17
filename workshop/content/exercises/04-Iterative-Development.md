@@ -20,14 +20,14 @@ Our development environment is a Kubernetes cluster, and so Tanzu Application Pl
 Tilt lets us make updates to our running application in seconds. Let's see how it works. We'll use the Tanzu command line to make sure that our initial deployment is ready:
 
 ```execute-2 
-tanzu apps workload get partnertapdemo
+tanzu apps workload get partnertapdemo -n default
 ```
 
 At the bottom, you will see a working URL like this once the deployment is ready:
 ```
 Knative Services
 NAME             READY   URL
-spring-sensors   Ready    http://partnertapdemo.default.tap11.tanzupartnerdemo.com
+partnertapdemo   Ready    http://partnertapdemo.default.tap11.tanzupartnerdemo.com
 ```
 Click on the URL in the terminal window to view the application.
 
