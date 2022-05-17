@@ -24,6 +24,8 @@ spec:
   #      value: #@ data.values.gitea.adminPassword
       - name: VIEW_CLUSTER_DOMAIN
         value: tap11.tanzupartnerdemo.com
+      - name: REGISTRY_HOST
+        value: tanzudemoreg.azurecr.io
   #    - name: HARBOR_USER
   #      value: #@ data.values.harbor.user
   #    - name: HARBOR_PASSWORD

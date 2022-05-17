@@ -6,7 +6,7 @@ cat <<'EOF' > /home/eduk8s/.local/share/code-server/User/settings.json
 {
     "redhat.telemetry.enabled": false,
     "java.server.launchMode": "Standard",
-    "tanzu.sourceImage": "$REGISTRY_HOST/spring-sensors-source",
+    "tanzu.sourceImage": "$REGISTRY_HOST/tap11/build-service/spring-sensors-source",
     "terminal.integrated.automationShell.linux": "/bin/bash",
     "workbench.startupEditor": "none",
     "update.showReleaseNotes": false,
