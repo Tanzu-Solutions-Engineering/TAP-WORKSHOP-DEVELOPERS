@@ -2,12 +2,15 @@
 set -x
 set +e
 
+# Switch to default namespace
+kubectl config set-context --current --namespace default
+
 cat <<'EOF' > /home/eduk8s/.local/share/code-server/User/settings.json
 {
     "redhat.telemetry.enabled": false,
     "java.server.launchMode": "Standard",
     "tanzu.sourceImage": "$TAP_REGISTRY_HOST/tap11/build-service/partnertapdemo-default",
-    "tanzu.namespace": "$SESSION_NAME",
+    "tanzu.namespace": "default",
     "terminal.integrated.automationShell.linux": "/bin/bash",
     "workbench.startupEditor": "none",
     "update.showReleaseNotes": false,
