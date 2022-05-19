@@ -14,3 +14,9 @@ You'll see a lot more of Learning Center as we progress, but let's get comfortab
 kubectl config get-contexts eduk8s
 ```  
 
+Switch to `default` namespace
+
+```execute
+kubectl config set-context --current --namespace default
+
+``` 
