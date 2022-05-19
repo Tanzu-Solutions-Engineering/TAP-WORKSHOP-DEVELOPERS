@@ -4,18 +4,12 @@ The Iterate cluster is a multitenant cluster, where Cody and his coworkers can l
 
 ![Iterate Cluster](images/iterate-cluster.png)
 
-The Iterate cluster is the only Kubernetes cluster where the developers need credentials or access. When Cody is ready to schedule a build, he simply needs to commit his changes to Git. As we will see, there are other clusters that will handle build, promotion, and deployment. Let's go ahead and commit changes to the Spring Sensors application we've been writing.
+The Iterate cluster is the only Kubernetes cluster where the developers need credentials or access. When Cody is ready to schedule a build, he simply needs to commit his changes to Git. As we will see, there are other clusters that will handle build, promotion, and deployment. Let's go ahead and commit changes to the `partnertapdemo` application we've been writing.
 
-```execute
-git -C /home/eduk8s/spring-sensors add .
+For demonstration purpose, code is already committed to GitHub repository.
+```dashboard:open-url
+url: https://github.com/dineshtripathi30/partnertapdemo
 ```
 
-```execute
-git -C /home/eduk8s/spring-sensors commit -a -m "Initial Commit of Spring Sensors"
-```
-
-```execute
-git -C /home/eduk8s/spring-sensors push -u origin main
-```
-
+You might be running git commands to commit code.
 Now, let's go check in with the Operations team to see how the build is automated.
