@@ -7,13 +7,13 @@ Alana manages another Kubernetes cluster known as the Build cluster. This is a c
 To begin scheduling builds for Cody's application, Alana will create a **Workload** resource on the Build cluster. The Workload watches the repo where Cody's application lives, and identifies the rules that will be used to build and deploy that applcation. Let's look at the Workload resource that Alana will create.
 
 ```editor:open-file
-file: /home/eduk8s/gitops-workloads/workload-{{ session_namespace }}.yaml
+file: /home/eduk8s/partnertapdemo/config/workload.yaml
 ```
 
 This file isn't complex, but it's very important, so let's examine it in detail.
 
 ```editor:select-matching-text
-file: /home/eduk8s/gitops-workloads/workload-{{ session_namespace }}.yaml
+file: /home/eduk8s/partnertapdemo/config/workload.yaml
 text: "workload-type"
 before: 0
 after: 0
@@ -22,7 +22,7 @@ after: 0
 The **workload-type** label identifies the secure **supply chain** that will be used to deliver Cody's application. What's a supply chain? We'll take a look in the next section.
 
 ```editor:select-matching-text
-file: /home/eduk8s/gitops-workloads/workload-{{ session_namespace }}.yaml
+file: /home/eduk8s/partnertapdemo/config/workload.yaml
 text: "part-of"
 before: 0
 after: 0
@@ -31,7 +31,7 @@ after: 0
 The **part-of** label is used by TAP GUI to identify the application. TAP GUI is built on the open source project Backstage, which groups applications into **Components**. This label tells TAP GUI to make all the information about Cody's application visible in the spring-sensors Component.
 
 ```editor:select-matching-text
-file: /home/eduk8s/gitops-workloads/workload-{{ session_namespace }}.yaml
+file: /home/eduk8s/partnertapdemo/config/workload.yaml
 text: "url:"
 before: 0
 after: 0
@@ -42,7 +42,7 @@ This URL identifies where the source code for Cody's application lives. The Buil
 But what if Alana already has a CI tool, like Jenkins or Azure DevOps, that is compiling source code and running tests? No problem! Instead of pointing to source, we can point the Workload at the repository where the compiled artifacts are stored by the CI pipeline.
 
 ```editor:select-matching-text
-file: /home/eduk8s/gitops-workloads/workload-{{ session_namespace }}.yaml
+file: /home/eduk8s/partnertapdemo/config/workload.yaml
 text: "minScale"
 before: 0
 after: 0
@@ -56,23 +56,6 @@ So let's review. Cody performed his development activities on the Iterate cluste
 
 ![Build Inputs](images/build-inputs.png)
 
-Execute the following commands to commit the Workload definition to the GitOps repository:
-
-```execute
-git -C /home/eduk8s/gitops-workloads add workload-{{ session_namespace }}.yaml
-```
-
-```execute
-git -C /home/eduk8s/gitops-workloads commit -a -m "Adding workload for {{ session_namespace }}"
-```
-
-```execute
-git -C /home/eduk8s/gitops-workloads pull -r
-```
-
-```execute
-git -C /home/eduk8s/gitops-workloads push -u origin main
-```
 
 Now, we'll see what the Build cluster does.
 
