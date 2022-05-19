@@ -9,29 +9,12 @@ The role of the Run cluster is to simply read the deployment specification that 
 Just as we created a **Workload** resource on the Build cluster to generate the supply chain for our application, we will create a **Deliverable** resource on the Run cluster, to instruct the Run cluster to sync with our GitOps repo. Let's preview the Deliverable:
 
 ```editor:open-file
-file: /home/eduk8s/gitops-deliverables/deliverable-{{ session_namespace }}.yaml
+file: /home/eduk8s/partnertapdemo/deliverable.yaml
 ```
 
-The deliverables are simple, they just contain identifiers for the application, and a reference to the same GitOps repo where they supply chain outputted to.
+The deliverables are simple, they just contain identifiers for the application, and a reference to the same GitOps repo or an Image repo where they supply chain outputted to.
 
 You know the drill by now: Alana isn't going to log directly into the Run clusters to create the deliverable. She will write the Deliverable to a GitOps repo, which will be synced to the Run cluster. Nobody ever has to directly access a sensitive environment like Production to schedule a deployment!
 
-Execute the following commands to commit the Deliverable definition to the GitOps repository:
-
-```execute
-git -C /home/eduk8s/gitops-deliverables add deliverable-{{ session_namespace }}.yaml
-```
-
-```execute
-git -C /home/eduk8s/gitops-deliverables commit -a -m "Adding deliverable for {{ session_namespace }}"
-```
-
-```execute
-git -C /home/eduk8s/gitops-deliverables pull -r
-```
-
-```execute
-git -C /home/eduk8s/gitops-deliverables push -u origin main
-```
 
 Now, the Run cluster is synced against the GitOps repo specified in the Deliverable. It will deploy our application, and when the supply chain updates the deployment specification, the Run cluster will sync to the new specification.
