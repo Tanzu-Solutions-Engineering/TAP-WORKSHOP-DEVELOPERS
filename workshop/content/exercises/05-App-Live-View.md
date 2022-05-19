@@ -3,12 +3,12 @@ Sometimes an application isn't behaving quite like we'd expect after deployment,
 Tanzu Application Platform provides Live View to help a developer like Cody gather that information. Let's take a look. We're going to access the Web UI known as TAP GUI, which can observe the deployment we just created:
 
 ```dashboard:open-url
-url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/catalog/default/component/spring-sensors/workloads
+url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/catalog/default/component/partnertapdemo/workloads
 ```
 
-Here we are looking at running deployments of `spring-sensors`, our application. There's a good chance that you see more than one deployment listed! That's because we are in a multitenant development environment, and different developers (or different workshop sessions) are each working on their own branch of the code. In a multi-tenant development cluster (also known as an Iterate cluster in TAP), each developer works in their own namespace for isolation.
+Here we are looking at running deployments of `partnertapdemo`, our application. There's a good chance that you see more than one deployment listed! That's because we are in a multitenant development environment, and different developers (or different workshop sessions) are each working on their own branch of the code. In a multi-tenant development cluster (also known as an Iterate cluster in TAP), each developer works in their own namespace for isolation.
 
-Your developer namespace is **{{session_namespace}}**. You can identify which `spring-sensors` app is yours by checking against the namespace column. Click on the spring-sensors hyperlink in the row that corresponds to your namespace. This will bring you to a detail view of your app:
+Your developer namespace is **``default``**. You can identify which `partnertapdemo` app is yours by checking against the namespace column. Click on the spring-sensors hyperlink in the row that corresponds to your namespace. This will bring you to a detail view of your app:
 
 ![Component View](images/component-view.png)
 
