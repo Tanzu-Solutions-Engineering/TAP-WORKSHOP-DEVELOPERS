@@ -28,7 +28,7 @@ before: 0
 after: 0
 ```
 
-The **part-of** label is used by TAP GUI to identify the application. TAP GUI is built on the open source project Backstage, which groups applications into **Components**. This label tells TAP GUI to make all the information about Cody's application visible in the spring-sensors Component.
+The **part-of** label is used by TAP GUI to identify the application. TAP GUI is built on the open source project Backstage, which groups applications into **Components**. This label tells TAP GUI to make all the information about Cody's application visible in the partnertapdemo Component.
 
 ```editor:select-matching-text
 file: /home/eduk8s/partnertapdemo/config/workload.yaml
