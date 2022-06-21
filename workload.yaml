@@ -1,21 +1,50 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: spring-sensors-$SESSION_NAMESPACE
+  name: partnertapdemo
+  namespace: default
   labels:
     apps.tanzu.vmware.com/workload-type: web
-    app.kubernetes.io/part-of: spring-sensors
+    apps.tanzu.vmware.com/has-tests: "true"
+    app.kubernetes.io/part-of: partnertapdemo
 spec:
+  serviceAccountName: default
+  params:
+  - name: annotations
+    value:
+      autoscaling.knative.dev/minScale: "1"
+#  - name: gitops_ssh_secret # Optional, if this is not specified during TAP installation
+#    value: git-secret
+#  - name: gitops_repository # This parameter enables the gitops 
+#    value: "https://github.com/dineshtripathi30/partnertapdemo-1"
+#  - name: gitops_branch # This parameter enables the gitops 
+#    value: "main"
+#  - name: gitops_commit_message
+#    value: "deliverable is here"
+#  image: ""
   source:
     git:
-      url: https://gitea.$INGRESS_DOMAIN/gitea_admin/$REPO_NAME.git
-      ref:
+      url: https://github.com/dineshtripathi30/partnertapdemo
+      ref: 
         branch: main
-  params:
-    - name: annotations
-      value:
-        autoscaling.knative.dev/minScale: "1"
-    - name: gitops_repository
-      value: ssh://git@github.com/cpage-pivotal/tap-gitops
-    - name: gitops_branch
-      value: spring-sensors-$SESSION_NAMESPACE
+#        tag: "v0.0.1"
+#        commit: "abc" 
+  resources:
+    requests:
+      memory: 100Mi
+      cpu: 100m
+    limits:
+      memory: 1Gi
+      cpu: 2000m
+  env:
+    - name: SPRING_PROFILES_ACTIVE
+      value: springdemo
+  
+  # ServiceClaims to be bound through ServiceBindings.
+  # +optional
+#  serviceClaims:
+#    - name: <string>
+#      ref:
+#        apiVersion: <string>
+#        kind: <string>
+#        name: <string>

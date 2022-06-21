@@ -15,7 +15,7 @@ spec:
     sessions:
       maximum: 10
   workshops:
-    - name: tap-overview
+    - name: tap-inner-loop-demo
       expires: 500m
       orphaned: 60m
       capacity: 20
