@@ -2,8 +2,6 @@
 set -x
 set +e
 
-# Source terminal init in current shell
-source 01-terminal-init.sh
 
 cat <<'EOF' > /home/eduk8s/.local/share/code-server/User/settings.json
 {
