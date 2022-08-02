@@ -26,10 +26,12 @@ RUN apt-get update && apt-get install -y unzip openjdk-11-jdk
 
 # Requirements for Live Update
 RUN curl -fsSL https://code-server.dev/install.sh | sh -s -- --version 4.3.0
-RUN mv /usr/bin/code-server /opt/code-server/bin/code-server
-COPY extensions/tanzu-vscode-extension.vsix /tmp
+#RUN mv /usr/bin/code-server /opt/code-server/bin/code-server
+COPY extensions/tanzu-vscode-extension-0.7.1+build.1.vsix /tmp
+COPY extensions/tanzu-app-accelerator-0.1.2.vsix /tmp
 RUN code-server --install-extension vscjava.vscode-java-pack && \
-    code-server --install-extension /tmp/tanzu-vscode-extension.vsix
+    code-server --install-extension /tmp/tanzu-vscode-extension-0.7.1+build.1.vsix \
+    code-server --install-extension /tmp/tanzu-app-accelerator-0.1.2.vsix
 RUN echo -n 'export PATH=~/.local/bin:$PATH' >> /etc/profile
 RUN chown -R eduk8s:users /home/eduk8s/.cache
 RUN chown -R eduk8s:users /home/eduk8s/.local
