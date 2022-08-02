@@ -40,6 +40,7 @@ spec:
         layout: split
       console:
         enabled: true
+        vendor: octant
       editor:
         enabled: true
       registry:
