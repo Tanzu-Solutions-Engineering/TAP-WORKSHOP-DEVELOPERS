@@ -7,9 +7,10 @@ metadata:
 spec:
   portal:
     title: Tanzu Application Platform Demos
+    password: VMware1!
     registration:
-      type: one-step
-      enabled: false
+      type: anonymous
+      enabled: true
     updates:
       workshop: true
     sessions:

@@ -5,7 +5,7 @@ kind: Workshop
 metadata:
   name: tap-inner-loop-demo
 spec:
-  title: TAP For App Developers
+  title: TAP Overview
   description: An introduction to the Tanzu Application Platform for Application Developers 
   vendor: vmware.com
   difficulty: beginner
