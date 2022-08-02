@@ -2,8 +2,8 @@
 set -x
 set +e
 
-# Switch to default namespace
-kubectl config set-context --current --namespace default
+# Source terminal init in current shell
+source 01-terminal-init.sh
 
 cat <<'EOF' > /home/eduk8s/.local/share/code-server/User/settings.json
 {

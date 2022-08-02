@@ -7,6 +7,8 @@ echo $USERNAME
 export PASSWORD1=`kubectl get secret registry-credentials -n default -o json | jq '.data' | cut -f2 -d":"|tr -d \" | awk 'NR>1 && NR < 3'`
 
 export PASSWORD=$(echo $PASSWORD1 | base64 -d | jq '.auths[].password' | tr -d '"')
+# Login to Docker Registry
+docker login $REGISTRY_HOST -u $USERNAME -p $PASSWORD
 
 # Rename eduk8s context to tap cluster name
 
