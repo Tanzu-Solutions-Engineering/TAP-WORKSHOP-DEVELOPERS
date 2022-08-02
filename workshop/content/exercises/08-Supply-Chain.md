@@ -5,16 +5,24 @@ Alana the operator, in consultation with other stakeholders like Enterprise Arch
 When we created the Workload definition for our application (through the GitOps repo), Supply Chain Choreographer created a new supply chain for us (it may take 30 seconds or so to show up). Let's take a look:
 
 ```dashboard:open-url
-url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/supply-chain/default/partnertapdemo
+url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/supply-chain/host/default/partnertapdemo
 ```
 
 It may take up to 60 seconds from the time we committed the workload, until the time the supply chain is created on the Build cluster. If the screen for the supply chain is empty, wait a few seconds and then refresh.
 
-This is a relatively simply supply chain, that is simpler to follow. Each stage in the supply chain independently determines when its source inputs have changed, and whether it needs to take reconciliation steps to ensure that the application deployment is compliant.
+This is one of the supply chain **source-test-scan-to-url**, that comes out of the box. Each stage in the supply chain independently determines when its source inputs have changed, and whether it needs to take reconciliation steps to ensure that the application deployment is compliant.
 
 ![Source Provider](images/scc-source-provider.png)
 
 The supply chain begins at the source provider step, where it will be monitoring the Git source code repo that was specified in the workload. It will supply the application source to subsequent steps in the supply chain, and continuously monitor for subsequent updates (commits) to the source.
+
+![Source Tester](images/scc-source-tester.png)
+
+The Source Tester step is responsible for doing source code tests. It uses a Tekton pipeline to run the source code checks and required tests needs to be codified. 
+
+![Source Scanner](images/scc-source-scanner.png)
+
+The Source Scanner step is responsible for doing source code scans using **Grype**.
 
 ![Image Builder](images/scc-image-builder.png)
 
