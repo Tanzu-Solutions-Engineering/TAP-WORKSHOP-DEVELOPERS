@@ -26,6 +26,8 @@ spec:
         value: tap11.tanzupartnerdemo.com
       - name: TAP_REGISTRY_HOST
         value: tanzudemoreg.azurecr.io
+      - name: ACC_SERVER_URL
+        value: https://accelerator.tap11.tanzupartnerdemo.com
   #    - name: HARBOR_USER
   #      value: #@ data.values.harbor.user
   #    - name: HARBOR_PASSWORD

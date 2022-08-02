@@ -31,4 +31,4 @@ git config --global user.name $GIT_USERNAME
 
 # Other Variables
 
-export ACC_SERVER_URL="https://accelerator.tap11.tanzupartnerdemo.com"
+#export ACC_SERVER_URL="https://accelerator.tap11.tanzupartnerdemo.com"
