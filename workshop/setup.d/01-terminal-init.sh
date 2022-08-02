@@ -23,3 +23,12 @@ export GIT_PASSWORD1=`kubectl get secret git-secret -n default -o json | jq '.da
 export GIT_USERNAME=$(echo $GIT_USERNAME1 | base64 -d | tr -d '"')
 #echo $GIT_USERNAME
 export GIT_PASSWORD=$(echo $GIT_PASSWORD1 | base64 -d | tr -d '"')
+
+# Setup GIT for change commit
+git config --global user.email "dinesh.tripathi30@gmail.com"
+git config --global user.name $GIT_USERNAME
+
+
+# Other Variables
+
+export ACC_SERVER_URL="https://accelerator.tap11.tanzupartnerdemo.com"

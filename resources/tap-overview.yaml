@@ -3,7 +3,7 @@
 apiVersion: learningcenter.tanzu.vmware.com/v1beta1
 kind: Workshop
 metadata:
-  name: tap-inner-loop-demo
+  name: tap-overview
 spec:
   title: TAP Overview
   description: An introduction to the Tanzu Application Platform for Application Developers 
@@ -12,7 +12,7 @@ spec:
   duration: 100m
   url: https://github.com/dineshtripathi30/tap-workshop
   content:
-    image: tanzudemoreg.azurecr.io/tapworkshop:v1
+    image: tanzudemoreg.azurecr.io/tapworkshop:v3
     files: github.com/dineshtripathi30/tap-workshop?ref=main
    # image: #@ "harbor.{}/tanzu-e2e/inner-tap-workshop:latest".format(data.values.ingress.domain)
    # files: #@ "github.com/{}/tap-workshop?ref={}".format(data.values.git.account,data.values.git.branch)
