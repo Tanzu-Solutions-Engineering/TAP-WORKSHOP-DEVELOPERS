@@ -18,3 +18,14 @@ You know the drill by now: Alana isn't going to log directly into the Run cluste
 
 
 Now, the Run cluster is synced against the GitOps repo specified in the Deliverable. It will deploy our application, and when the supply chain updates the deployment specification, the Run cluster will sync to the new specification.
+
+In this demo, **ArgoCD** is already deployed on a Kubernetes Cluster for the GitOps purpose. **Deliverable.yaml** file is written in a git repository and application is created/configured on the ArgoCD portal. e.g.
+
+![ArgoCD App Config](images/gitops-app.png)
+
+Open the ArgoCD UI to validate. Ask workshop administrator for the credentials.
+```dashboard:open-url
+url: https://argocd.{{ ENV_VIEW_CLUSTER_DOMAIN }}/
+```
+
+Above application is configured to deploy in a separate namespace (usually it will be a separate TAP Run cluster). 
