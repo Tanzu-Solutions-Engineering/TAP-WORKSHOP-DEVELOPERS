@@ -6,10 +6,8 @@ The Iterate cluster is a multitenant cluster, where Cody and his coworkers can l
 
 The Iterate cluster is the only Kubernetes cluster where the developers need credentials or access. When Cody is ready to schedule a build, he simply needs to commit his changes to Git. As we will see, there are other clusters that will handle build, promotion, and deployment. Let's go ahead and commit changes to the `partnertapdemo` application we've been writing.
 
-For demonstration purpose, code is already committed to GitHub repository.
-```dashboard:open-url
-url: https://github.com/dineshtripathi30/partnertapdemo
+```execute-1 
+cd partnertapdemo && git init && git add . && git commit -m "updated changes" && git remote add origin https://$GIT_HOST/tapgit/partnertapdemo  && git push https://$GIT_USER:$GIT_PASSWORD@$GIT_HOST/tapgit/partnertapdemo HEAD:master --force
 ```
 
-You might be running git commands to commit code.
 Now, let's go check in with the Operations team to see how the build is automated.
