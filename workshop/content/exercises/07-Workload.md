@@ -57,5 +57,13 @@ So let's review. Cody performed his development activities on the Iterate cluste
 ![Build Inputs](images/build-inputs.png)
 
 
-Now, we'll see what the Build cluster does.
+Now, let's apply the workload and explore the supply chain which drives the deployment process.
 
+```execute-1 
+tanzu apps workload create partnertapdemo1 --git-repo https://tapgit.tap11.tanzupartnerdemo.com/tapgit/partnertapdemo \
+--type web \
+--label app.kubernetes.io/part-of=partnertapdemo1 \
+--namespace default \
+--label apps.tanzu.vmware.com/has-tests=true \
+--git-branch master --namespace default --yes
+```
