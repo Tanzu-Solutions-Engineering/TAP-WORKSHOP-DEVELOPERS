@@ -16,7 +16,11 @@ This is a Java web application, let's take a look at the source code:
 file: partnertapdemo/src/main/java/com/partnertapdemo/partnertapdemo/HelloController.java
 ```
 
-With Learning Center, we are using the embedded Coder dev environment that runs in your browser. Of course, you can also code on your local machine using supported IDEs like Visual Studio Code and IntelliJ IDEA. Let's use the Developer Tooling in Tanzu Application Platform to run the application.
+With Learning Center, we are using the embedded Coder dev environment that runs in your browser. Of course, you can also code on your local machine using supported IDEs like Visual Studio Code and IntelliJ IDEA. Your scaffold code contains a **workload.yaml** file that can be used to deploy workload from VSCode with a single click. Look at the screenshot below:
+
+![workload-apply](images/tap-workload-apply.png)
+
+But, Let's use another Developer Tooling in Tanzu Application Platform to run the application.
 
 ```editor:open-file
 file: partnertapdemo/Tiltfile
