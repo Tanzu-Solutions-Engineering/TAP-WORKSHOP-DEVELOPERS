@@ -1,9 +1,9 @@
-export GITREPO = https://gitea.$INGRESS_DOMAIN/gitea_admin/$(cat repo.txt).git
+export GITREPO=https://gitea.$INGRESS_DOMAIN/gitea_admin/$(cat repo.txt).git
 
-export IMAGE_TARGET = harbor.$INGRESS_DOMAIN / $SESSION_NAMESPACE / spring - sensors
+export IMAGE_TARGET=tanzudemoreg.azurecr.io/$SESSION_NAMESPACE/spring-sensors
 
-export REGISTRY_HOST = tanzudemoreg.azurecr.io
+export REGISTRY_HOST=tanzudemoreg.azurecr.io
 
-export REGISTRY_USERNAME = $(kubectl get secret registry - credentials - n default -o json | jq - r '.data.".dockerconfigjson"' | base64 - d | jq - r '.auths."tanzudemoreg.azurecr.io".username')
+export REGISTRY_USERNAME=$(kubectl get secret registry - credentials - n default -o json | jq - r '.data.".dockerconfigjson"' | base64 - d | jq - r '.auths."tanzudemoreg.azurecr.io".username')
 
-export REGISTRY_PASSWORD = $(kubectl get secret registry - credentials - n default -o json | jq - r '.data.".dockerconfigjson"' | base64 - d | jq - r '.auths."tanzudemoreg.azurecr.io".password')
+export REGISTRY_PASSWORD=$(kubectl get secret registry - credentials - n default -o json | jq - r '.data.".dockerconfigjson"' | base64 - d | jq - r '.auths."tanzudemoreg.azurecr.io".password')
