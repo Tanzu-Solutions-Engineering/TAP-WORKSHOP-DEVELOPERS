@@ -37,3 +37,5 @@ git config --global user.name $GIT_USERNAME
 
 export ARGOCD_USERNAME=admin
 export ARGOCD_PASSWORD=pwd
+
+exec bash
