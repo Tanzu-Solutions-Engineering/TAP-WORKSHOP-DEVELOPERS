@@ -15,7 +15,7 @@ docker login $REGISTRY_HOST -u $REGISTRY_USERNAME -p $REGISTRY_PASSWORD
 
 # Rename eduk8s context to tap cluster name
 
-kubectl config rename-context eduk8s tap11-aks-fullcluster
+# kubectl config rename-context eduk8s tap11-aks-fullcluster
 
 # Switch to default namespace
 # kubectl config set-context --current --namespace default
