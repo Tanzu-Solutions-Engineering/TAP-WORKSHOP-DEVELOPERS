@@ -16,4 +16,3 @@ git:
   branch: main
   #! Optionally, you can specify a Github token. This will be used by Harbor's Trivy scanner to avoid hitting rate limites
   #!   gitHubToken: <token>
-

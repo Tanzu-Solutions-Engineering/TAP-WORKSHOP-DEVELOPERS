@@ -22,7 +22,7 @@ spec:
       capacity: 20
       reserved: 2
     - name: tap-development
-      expires: 60m
-      orphaned: 20m
+      expires: 500m
+      orphaned: 60m
       capacity: 10
-      reserved: 0
+      reserved: 1

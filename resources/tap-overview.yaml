@@ -3,35 +3,35 @@
 apiVersion: learningcenter.tanzu.vmware.com/v1beta1
 kind: Workshop
 metadata:
-  name: tap-overview
+  name: tap-overview-multi-tenant
 spec:
-  title: TAP Overview
-  description: An introduction to the Tanzu Application Platform for Application Developers 
+  title: TAP Overview Multi-Tenant
+  description: An introduction to the Tanzu Application Platform for Application Developers
   vendor: vmware.com
   difficulty: beginner
   duration: 100m
   url: https://github.com/dineshtripathi30/tap-workshop
   content:
     image: tanzudemoreg.azurecr.io/tapworkshop:v3
-    files: github.com/dineshtripathi30/tap-workshop?ref=main
-   # image: #@ "harbor.{}/tanzu-e2e/inner-tap-workshop:latest".format(data.values.ingress.domain)
-   # files: #@ "github.com/{}/tap-workshop?ref={}".format(data.values.git.account,data.values.git.branch)
+    files: github.com/dineshtripathi30/tap-workshop?ref=multi-tenant
+    # image: #@ "harbor.{}/tanzu-e2e/inner-tap-workshop:latest".format(data.values.ingress.domain)
+    # files: #@ "github.com/{}/tap-workshop?ref={}".format(data.values.git.account,data.values.git.branch)
   session:
     resources:
       memory: 3Gi
     env:
-  #    - name: GITEA_PASSWORD
-  #      value: #@ data.values.gitea.adminPassword
+      # - name: GITEA_PASSWORD
+      #   value: #@ data.values.gitea.adminPassword
       - name: VIEW_CLUSTER_DOMAIN
         value: tap11.tanzupartnerdemo.com
       - name: TAP_REGISTRY_HOST
         value: tanzudemoreg.azurecr.io
       - name: ACC_SERVER_URL
         value: https://accelerator.tap11.tanzupartnerdemo.com
-  #    - name: HARBOR_USER
-  #      value: #@ data.values.harbor.user
-  #    - name: HARBOR_PASSWORD
-  #      value: #@ data.values.harbor.adminPassword
+      # - name: HARBOR_USER
+      #   value: #@ data.values.harbor.user
+      # - name: HARBOR_PASSWORD
+      #   value: #@ data.values.harbor.adminPassword
     namespaces:
       budget: custom
     applications:
@@ -67,6 +67,6 @@ spec:
           kind: ClusterRole
           name: cluster-admin
         subjects:
-        - kind: ServiceAccount
-          namespace: $(workshop_namespace)
-          name: $(service_account)
+          - kind: ServiceAccount
+            namespace: $(workshop_namespace)
+            name: $(service_account)

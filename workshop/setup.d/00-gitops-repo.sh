@@ -1,24 +1,29 @@
-#!/bin/bash
-# set -x
-# set +e
+!/bin/bash
+set -x
+set +e
 
-# export REPO_NAME=$SESSION_NAMESPACE-$(date +%s)
-# echo $REPO_NAME > repo.txt
+export REPO_NAME=$SESSION_NAMESPACE-$(date +%s)
+echo $REPO_NAME > repo.txt
 
-# mkdir spring-sensors
-# cd spring-sensors
-# echo "# Spring Sensors Application" >> README.MD
-# git init
-# git checkout -b main
-# git config user.name gitea_admin
-# git config user.email "gitea_admin@example.com"
-# git add .
-# git commit -a -m "Initial Commit"
+export GIT_USERNAME=$(kubectl get secret gitea-secret -n default -o json | jq -r '.data.username' | base64 -d)
+export GIT_PASSWORD=$(kubectl get secret gitea-secret -n default -o json | jq -r '.data.password' | base64 -d)
+export GIT_HOST=tapgit.tap11.tanzupartnerdemo.com
 
-# git remote add origin https://gitea_admin:$GITEA_PASSWORD@gitea.${INGRESS_DOMAIN}/gitea_admin/$REPO_NAME.git
-# git push -u origin main
+mkdir partnertapdemo
+cd partnertapdemo
+echo "# TAP Demo for Tanzu Partners" >> README.MD
+git init
+git checkout -b main
+git config user.name $GIT_USERNAME
+git config user.email "$GIT_USERNAME@gitea.com"
+git add .
+git commit -a -m "Initial Commit"
 
-# cd ..
+
+git remote add origin https://gitea_admin:$GITEA_PASSWORD@gitea.${INGRESS_DOMAIN}/tapgit/$REPO_NAME.git
+git push -u origin main
+
+cd ..
 # git clone https://gitea_admin:$GITEA_PASSWORD@gitea.${INGRESS_DOMAIN}/gitea_admin/gitops-workloads.git
 # git -C /home/eduk8s/gitops-workloads config user.name gitea_admin
 # git -C /home/eduk8s/gitops-workloads config user.email "gitea_admin@example.com"
