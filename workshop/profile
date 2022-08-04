@@ -1,6 +1,6 @@
 export GITREPO=https://gitea.$INGRESS_DOMAIN/gitea_admin/$(cat repo.txt).git
 
-export IMAGE_TARGET=tanzudemoreg.azurecr.io/$SESSION_NAMESPACE/spring-sensors
+export IMAGE_TARGET=tanzudemoreg.azurecr.io/$SESSION_NAMESPACE/partnertapdemo
 
 export REGISTRY_HOST=tanzudemoreg.azurecr.io
 
