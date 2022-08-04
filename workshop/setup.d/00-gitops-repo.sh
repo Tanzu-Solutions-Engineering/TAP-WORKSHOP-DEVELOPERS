@@ -20,7 +20,7 @@ git add .
 git commit -a -m "Initial Commit"
 
 
-git remote add origin https://gitea_admin:$GITEA_PASSWORD@gitea.${INGRESS_DOMAIN}/tapgit/$REPO_NAME.git
+git remote add origin https://$GIT_USERNAME:$GITEA_PASSWORD@${GIT_HOST}/tapgit/$REPO_NAME.git
 git push -u origin main
 
 cd ..

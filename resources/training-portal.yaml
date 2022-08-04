@@ -21,7 +21,7 @@ spec:
       orphaned: 60m
       capacity: 20
       reserved: 2
-    - name: tap-development
+    - name: tap-overview-multi-tenant
       expires: 500m
       orphaned: 60m
       capacity: 10

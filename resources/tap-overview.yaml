@@ -13,7 +13,7 @@ spec:
   url: https://github.com/dineshtripathi30/tap-workshop
   content:
     image: tanzudemoreg.azurecr.io/tapworkshop:v3
-    files: github.com/dineshtripathi30/tap-workshop?ref=multi-tenant
+    files: github.com/Tanzu-Partner-SE/tap-workshop-1?ref=multi-tenant
     # image: #@ "harbor.{}/tanzu-e2e/inner-tap-workshop:latest".format(data.values.ingress.domain)
     # files: #@ "github.com/{}/tap-workshop?ref={}".format(data.values.git.account,data.values.git.branch)
   session:
@@ -44,7 +44,7 @@ spec:
       editor:
         enabled: true
       registry:
-        enabled: true
+        enabled: false
     objects:
       - apiVersion: v1
         kind: LimitRange
