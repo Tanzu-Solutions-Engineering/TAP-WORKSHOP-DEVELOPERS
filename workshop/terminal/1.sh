@@ -1,9 +1,8 @@
 #!/bin/bash
 
 
-while true; do
 
-echo "Hello from your Terminal"
+#echo "Hello from your Terminal"
 
 export REGISTRY_HOST=tanzudemoreg.azurecr.io
 
@@ -42,6 +41,5 @@ export ARGOCD_PASSWORD=pwd
 
 clear
 
-done
 
 # exec bash
