@@ -25,4 +25,4 @@ spec:
       expires: 500m
       orphaned: 60m
       capacity: 10
-      reserved: 1
+      reserved: 0

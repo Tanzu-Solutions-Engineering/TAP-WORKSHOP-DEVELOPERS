@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -eo pipefail
 
 echo "Hello from your Terminal"
 
