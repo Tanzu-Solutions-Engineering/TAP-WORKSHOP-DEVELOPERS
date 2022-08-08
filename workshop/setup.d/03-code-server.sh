@@ -8,7 +8,7 @@ cat <<'EOF' > /home/eduk8s/.local/share/code-server/User/settings.json
     "redhat.telemetry.enabled": false,
     "java.server.launchMode": "Standard",
     "tanzu.sourceImage": "$TAP_REGISTRY_HOST/tap11/build-service/partnertapdemo-default",
-    "tanzu.namespace": "default",
+    "tanzu.namespace": "${SESSION_NAMESPACE}",
     "tanzu-app-accelerator.accServerUrl": "$ACC_SERVER_URL",
     "tanzu.enableLiveHover": true,
     "terminal.integrated.automationShell.linux": "/bin/bash",
