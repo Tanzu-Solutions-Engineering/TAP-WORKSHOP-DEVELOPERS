@@ -1,11 +1,11 @@
-#@ load("@ytt:data", "data")
+# #@ load("@ytt:data", "data")
 
-image:
-  repository: #@ "{}/gitea/gitea".format(data.values.registry.dockerhub)
+# image:
+#   repository: #@ "{}/gitea/gitea".format(data.values.registry.dockerhub)
 
 gitea:
-  admin:
-    password: #@ data.values.gitea.adminPassword
+  #   admin:
+  #     password: #@ data.values.gitea.adminPassword
   config:
     repository:
       DEFAULT_PUSH_CREATE_PRIVATE: false
