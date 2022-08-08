@@ -3,7 +3,7 @@
 
 #echo "Hello from your Terminal"
 
-export ENV_REGISTRY_HOST=tanzudemoreg.azurecr.io
+export REGISTRY_HOST=tanzudemoreg.azurecr.io
 
 export REGISTRY_USERNAME=$(kubectl get secret registry-credentials -n default -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzudemoreg.azurecr.io".username')
 
