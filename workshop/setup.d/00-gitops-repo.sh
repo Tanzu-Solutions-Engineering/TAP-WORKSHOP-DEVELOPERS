@@ -6,13 +6,13 @@ set +e
 export REPO_NAME=$SESSION_NAMESPACE-$(date +%s)
 echo $REPO_NAME > repo.txt
 
-export GIT_USERNAME=$(kubectl get secret gitea-secret -n default -o json | jq -r '.data.username' | base64 -d)
+export GIT_USERNAME="gitea_admin" #$(kubectl get secret gitea-secret -n default -o json | jq -r '.data.username' | base64 -d)
 export GIT_PASSWORD=$(kubectl get secret gitea-secret -n default -o json | jq -r '.data.password' | base64 -d)
 export GIT_HOST=tapgit.tap11.tanzupartnerdemo.com
 
 mkdir partnertapdemo
 cd partnertapdemo
-echo "# TAP Demo for Tanzu Partners" >> README.MD
+echo "# TAP Demo for Tanzu Partners" >> README.md
 git init
 git checkout -b main
 git config user.name $GIT_USERNAME
@@ -21,7 +21,7 @@ git add .
 git commit -a -m "Initial Commit"
 
 
-git remote add origin https://$GIT_USERNAME:$GIT_PASSWORD@${GIT_HOST}/tapgit/$REPO_NAME.git
+git remote add origin https://$GIT_USERNAME:$GIT_PASSWORD@${GIT_HOST}/$GIT_USERNAME/$REPO_NAME.git
 git push -u origin main
 
 cd ..
