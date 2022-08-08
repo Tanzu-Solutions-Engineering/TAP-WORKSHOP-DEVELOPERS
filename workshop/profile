@@ -7,3 +7,5 @@
 # export REGISTRY_USERNAME=$(kubectl get secret registry - credentials - n default -o json | jq - r '.data.".dockerconfigjson"' | base64 - d | jq - r '.auths."tanzudemoreg.azurecr.io".username')
 
 # export REGISTRY_PASSWORD=$(kubectl get secret registry - credentials - n default -o json | jq - r '.data.".dockerconfigjson"' | base64 - d | jq - r '.auths."tanzudemoreg.azurecr.io".password')
+
+. ./profile.d/
