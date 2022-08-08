@@ -41,4 +41,4 @@ export ARGOCD_PASSWORD=pwd
 clear
 
 
-exec bash
+#exec bash
