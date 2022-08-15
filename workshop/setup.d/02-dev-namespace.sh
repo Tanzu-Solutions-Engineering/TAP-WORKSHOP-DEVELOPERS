@@ -13,3 +13,4 @@ export REG_PASSWORD=$(kubectl get secret registry-credentials -n default -o json
 
 REGISTRY_PASSWORD=$REG_PASSWORD kp secret create registry-credentials --registry ${REGISTRY_HOST} --registry-user $REGISTRY_USERNAME
 
+REGISTRY_PASSWORD=$REG_PASSWORD kp secret create tanzu-tap-repository-fetch-0 --registry ${REGISTRY_HOST} --registry-user $REGISTRY_USERNAME
