@@ -12,6 +12,10 @@ modules:
     - exercises/07-Workload
     - exercises/08-Supply-Chain
     - exercises/09-Deliverable
+    - exercises/10-Catrographer
+    - exercises/11-metastore
+    - exercises/12-APIDocs
+    - exercises/13-TechDocs
     - workshop-summary
     vars:
     - name: harbor_project_id
