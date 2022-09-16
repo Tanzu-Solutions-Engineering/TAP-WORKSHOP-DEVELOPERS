@@ -5,6 +5,7 @@ set +e
 
 export REPO_NAME=$SESSION_NAMESPACE-$(date +%s)
 echo $REPO_NAME > repo.txt
+REPO_NAME=$(cat repo.txt)
 
 export GIT_USERNAME=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.username' | base64 -d)
 export GIT_PASSWORD=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.password' | base64 -d)
