@@ -28,6 +28,18 @@ modules:
         exit_sign: Deliverable
     exercises/09-Deliverable:
         name: Deliverable
+        exit_sign: Catrographer
+    exercises/10-Catrographer:
+        name: Catrographer
+        exit_sign: metastore
+    exercises/11-metastore:
+        name: metastore
+        exit_sign: APIDocs
+    exercises/12-APIDocs:
+        name: APIDocs
+        exit_sign: TechDocs
+    exercises/13-TechDocs:
+        name: TechDocs
         exit_sign: Conclusion
     workshop-summary:
         name: Workshop Summary
