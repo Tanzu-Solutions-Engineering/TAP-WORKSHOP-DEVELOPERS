@@ -20,28 +20,29 @@ Our development environment is a Kubernetes cluster, and so Tanzu Application Pl
 Tilt lets us make updates to our running application in seconds. Let's see how it works. We'll use the Tanzu command line to make sure that our initial deployment is ready:
 
 ```execute-2 
-tanzu apps workload get partnertapdemo -n default
+tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
 
 At the bottom, you will see a working URL like this once the deployment is ready:
+
 ```
 Knative Services
 NAME             READY   URL
-partnertapdemo   Ready    http://partnertapdemo.default.tap11.tanzupartnerdemo.com
+{{ session_namespace }}   Ready    http://{{ session_namespace }}.default.tap11.tanzupartnerdemo.com
 ```
 Click on the URL in the terminal window to view the application.
 
 Now, let's make code changes. The banner text currently reads "Spring Sensors". Let's change the banner to something else:
 
 ```editor:select-matching-text
-file: partnertapdemo/src/main/java/com/partnertapdemo/partnertapdemo/HelloController.java
+file: {{ session_namespace }}/src/main/java/com/partnertapdemo/partnertapdemo/HelloController.java
 text: "Welcome to the TAP Demo by Tanzu Partner SE Team"
 ```
 
 You can replace the selected text by typing in the code editor, or automatically apply a replacement string by clicking below:
 
 ```editor:replace-text-selection
-file: partnertapdemo/src/main/java/com/partnertapdemo/partnertapdemo/HelloController.java
+file: {{ session_namespace }}/src/main/java/com/partnertapdemo/partnertapdemo/HelloController.java
 text: Welcome to the TAP Demo, Experts
 ```
 
