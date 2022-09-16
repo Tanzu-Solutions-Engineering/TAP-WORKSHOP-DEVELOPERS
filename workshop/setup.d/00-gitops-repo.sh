@@ -6,9 +6,9 @@ set +e
 export REPO_NAME=$SESSION_NAMESPACE-$(date +%s)
 echo $REPO_NAME > repo.txt
 
-export GIT_USERNAME=$(kubectl get secret gitea-secret -n default -o json | jq -r '.data.username' | base64 -d)
-export GIT_PASSWORD=$(kubectl get secret gitea-secret -n default -o json | jq -r '.data.password' | base64 -d)
-export GIT_HOST=tapgit.tap11.tanzupartnerdemo.com
+export GIT_USERNAME=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.username' | base64 -d)
+export GIT_PASSWORD=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.password' | base64 -d)
+export GIT_HOST=gitea-tapdemo.captainvirtualization.in
 
 mkdir partnertapdemo
 cd partnertapdemo
