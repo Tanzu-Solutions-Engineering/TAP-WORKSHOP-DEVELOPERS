@@ -1,10 +1,6 @@
 As we saw previously, Application Accelerator allows you to download your project template as a .zip file to your local machine, using the Web UI. Here, we are going to use a command-line tool to download the template to our workshop terminal session. The Tanzu CLI provides plugin features for working with Tanzu Application Platform. Let's download the project template:
 
 ```execute
-tanzu acc create {{ session_namespace }} --git-repository https://github.com/Eknathreddy09/partnertapdemo-app --git-branch main
-```
-
-```execute
 tanzu accelerator generate {{ session_namespace }} --server-url https://accelerator.{{ ENV_VIEW_CLUSTER_DOMAIN }}
 ```
 
