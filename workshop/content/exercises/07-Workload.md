@@ -60,7 +60,7 @@ So let's review. Cody performed his development activities on the Iterate cluste
 Now, let's apply the workload and explore the supply chain which drives the deployment process.
 
 ```execute-1 
-tanzu apps workload create {{ session_namespace }}-a --git-repo https://gitea-tapdemo.captainvirtualization.in/tapdemo-user/$GIT_REPO \
+tanzu apps workload create {{ session_namespace }}-a --git-repo https://gitea-tapdemo.captainvirtualization.in/tapdemo-user/$REPO_NAME \
 --type web \
 --label app.kubernetes.io/part-of={{ session_namespace }}-a \
 --namespace tap-install \
