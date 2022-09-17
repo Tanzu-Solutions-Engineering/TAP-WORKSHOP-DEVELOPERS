@@ -28,8 +28,15 @@ At the bottom, you will see a working URL like this once the deployment is ready
 ```
 Knative Services
 NAME             READY   URL
-{{ session_namespace }}   Ready    http://{{ session_namespace }}.default.tap11.tanzupartnerdemo.com
+{{ session_namespace }}   Ready    http://{{ session_namespace }}.tap-install.workshop.tap.captainvirtualization.in
 ```
+
+Access the Application that is deployed
+
+```dashboard:open-url
+url: http://{{ session_namespace }}.tap-install.workshop.tap.captainvirtualization.in
+```
+
 Click on the URL in the terminal window to view the application.
 
 Now, let's make code changes. The banner text currently reads "Spring Sensors". Let's change the banner to something else:
