@@ -55,4 +55,29 @@ text: Welcome to the TAP Demo, Experts
 
 This code change will automatically trigger a patch to the running container. In under 10 seconds, you'll see the application restart in the terminal window. Go to the browser tab where your application is running, and refresh it. You'll see the code changes applied.
 
+If you want to stop an auto update, Click to run below command:
+
+```dashboard:open-url
+url: http://tap-demos-w02-s001.tap-install.workshop.tap.captainvirtualization.in/
+```
+
+```execute
+tanzu apps workload list -n tap-install
+```
+
+```execute
+tanzu apps workload get {{ session_namespace }} -n tap-install
+```
+
+```
+Knative Services
+NAME                 READY   URL
+tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.workshop.tap.captainvirtualization.in
+```
+
+```editor:execute-command
+command: tanzu.liveUpdateStop
+```
+
+
 Now Cody the developer can hit the productivity zone. He can start coding on his next feature, and immediately see incremental results in his running container to keep driving in the right direction. Let's see what else Cody can do with Tanzu Application Platform.
