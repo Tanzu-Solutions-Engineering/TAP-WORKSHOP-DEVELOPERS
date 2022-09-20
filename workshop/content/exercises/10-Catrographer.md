@@ -3,7 +3,7 @@
 VMware Tanzu Application Platform (TAP) uses Supply Chain Choreographer which is based on the open-source Cartographer, to allow App Operators to create pre-approved paths to production by integrating Kubernetes resources with the elements of their existing toolchains.
 
 ```dashboard:open-url
-url: https://cartographer.sh
+url: https://catrographer.sh
 ```
 
 Each pre-approved supply chain creates a paved road to production that allows developers to focus on delivering value to their users and provides App Operators the assurance that all code in production has passed through all the steps of an approved workflow.
@@ -57,3 +57,114 @@ With Cartographer, it's possible to choreograph both Kubernetes and non-Kubernet
 TAP provides a full integration of all of its components via out of the box Supply Chains that can be customized for customers' processes and tools.
 
 Let's now explore the two fundamental resources that an operator deploys, Supply Chains and Templates, and how these interact with the resource a developer deploys, the Workload. We'll do this hands-on with an example of a simple supply chain that watches a Git repository for changes, builds a container image, and deploys it to the cluster.
+
+###### Supply Chain: 
+
+```execute
+kubectl get clustersupplychain -n tap-install
+```
+
+###### ClusterSourceTemplate
+
+```execute
+kubectl get ClusterSourceTemplate -n tap-install
+```
+
+GitRepository:
+
+```execute
+kubectl get GitRepository -n tap-install
+```
+
+ImageRepository
+
+```execute
+kubectl get ImageRepository -n tap-install
+```
+
+SourceScan
+
+```execute
+kubectl get SourceScan -n tap-install
+```
+
+source-template:
+
+```execute
+kubectl get ClusterSourceTemplate source-template -n tap-install
+```
+
+testing-pipeline:
+
+```execute
+kubectl get ClusterSourceTemplate source-template -n tap-install
+```
+
+Runnable:
+
+```execute
+kubectl get Runnable -n tap-install
+```
+
+###### ClusterImageTemplate
+
+```execute
+kubectl get ClusterImageTemplate -n tap-install
+```
+
+ImageScan
+
+```execute
+kubectl get ImageScan -n tap-install
+```
+
+###### ClusterConfigTemplate
+
+```execute
+kubectl get ClusterConfigTemplate -n tap-install
+```
+
+convention-template:
+
+```execute
+kubectl get podIntent -n tap-install
+```
+###### ClusterTemplate
+
+```execute
+kubectl get ClusterTemplate -n tap-install
+```
+
+```execute
+kubectl get deliverable -n tap-install
+```
+
+###### ClusterRunTemplate
+
+```execute
+kubectl get ClusterRunTemplate -n tap-install
+```
+
+commit-and-pr-pipelinerun
+
+```execute
+kubectl get TaskRun -n tap-install
+```
+
+tekton-source-pipelinerun
+
+```execute
+kubectl get PipelineRun -n tap-install
+```
+
+###### Pipeline
+
+```execute
+kubectl get pipeline -n tap-install
+```
+
+###### Scanpolicy
+
+```execute
+kubectl get scanpolicy -n tap-install
+```
