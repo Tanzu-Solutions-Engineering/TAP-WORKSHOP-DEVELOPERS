@@ -47,7 +47,7 @@ tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.workshop.tap.
 ```
 
 ```dashboard:open-url
-url: http://tap-demos-w02-s001.tap-install.workshop.tap.captainvirtualization.in/
+url: http://{{ session_namespace }}.tap-install.workshop.tap.captainvirtualization.in/
 ```
 
 ![IDE app](images/IDE-1.png)
