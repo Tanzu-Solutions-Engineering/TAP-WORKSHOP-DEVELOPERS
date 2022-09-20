@@ -9,3 +9,7 @@ With Learning Center, Cody can get up to speed on his company's best practices a
 It's very easy for Cody's company to author and customize Learning Center workshops to create enablement specific to their enterprise. It's as easy as writing a README for a Git repository.
 
 You'll see a lot more of Learning Center as we progress, but let's get comfortable using the terminal. On one of the terminal windows to the right, type a Linux shell command, or click in the textbox below to have Learning Center execute a command for you.
+
+```execute
+source /opt/workshop/setup.d/01-terminal-init.sh
+``` 
