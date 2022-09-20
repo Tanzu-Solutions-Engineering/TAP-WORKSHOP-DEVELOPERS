@@ -11,7 +11,7 @@ url: https://tap-gui.workshop.tap.captainvirtualization.in/catalog/default/api/d
 ##### VMWare Docs - API Docs
 
 ```dashboard:open-url
-https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-tap-gui-plugins-api-docs.html
+url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-tap-gui-plugins-api-docs.html
 ```
 
 ##### Supported API Formats: 
