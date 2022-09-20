@@ -32,7 +32,7 @@ git config user.email "$GIT_USERNAME@gitea.com"
 git add .
 git commit -a -m "Initial Commit"
 
-cd ..
-
 git remote add origin https://$GIT_USERNAME:$GIT_PASSWORD@${GIT_HOST}/$GIT_USERNAME/$REPO_NAME.git
 git push -u origin main
+
+cd ..
