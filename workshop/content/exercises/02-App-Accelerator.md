@@ -19,7 +19,7 @@ Now, Cody can discover a template that is appropriate for the programming langua
 ![Accelerator Templates](images/acc-templates.png)
 
 ```execute
-tanzu accelerator create {{ session_namespace }} --git-repository https://github.com/Eknathreddy09/partnertapdemo-app --git-branch main
+tanzu accelerator create {{ session_namespace }} --git-repository https://github.com/Eknathreddy09/partnertapdemo-app --git-branch main --display-name "$SESSION_NAME"
 ```
 
 Let's work with the Spring project template. Press the choose button in the tile for `{{ session_namespace }}` accelerator. The UI will offer some optional parameters for customizing the project template, you can accept the defaults and hit **Next**. You'll then be prompted to review your choices, and you can press **Generate Accelerator**.
