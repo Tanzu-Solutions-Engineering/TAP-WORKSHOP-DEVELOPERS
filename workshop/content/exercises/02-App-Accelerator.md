@@ -22,6 +22,10 @@ Now, Cody can discover a template that is appropriate for the programming langua
 tanzu accelerator create {{ session_namespace }} --git-repository https://github.com/Eknathreddy09/partnertapdemo-app --git-branch main --display-name "$SESSION_NAME"
 ```
 
+```execute
+tanzu accelerator list 
+```
+
 Let's work with the Spring project template. Press the choose button in the tile for `{{ session_namespace }}` accelerator. The UI will offer some optional parameters for customizing the project template, you can accept the defaults and hit **Next**. You'll then be prompted to review your choices, and you can press **Generate Accelerator**.
 
 Application Accelerator now creates your project template, and gives you the option of browsing or downloading the template. Let's browse it by clicking "Explore Zip File"
