@@ -67,3 +67,21 @@ tanzu apps workload create {{ session_namespace }}-a --git-repo https://gitea-ta
 --label apps.tanzu.vmware.com/has-tests=true \
 --git-branch main --yes
 ```
+
+```execute-2 
+tanzu apps workload get {{ session_namespace }}-a -n tap-install
+```
+
+At the bottom, you will see a working URL like this once the deployment is ready:
+
+```
+Knative Services
+NAME             READY   URL
+{{ session_namespace }}-a   Ready    http://{{ session_namespace }}-a.tap-install.workshop.tap.captainvirtualization.in
+```
+
+Access the Application that is deployed
+
+```dashboard:open-url
+url: http://{{ session_namespace }}-a.tap-install.workshop.tap.captainvirtualization.in
+```
