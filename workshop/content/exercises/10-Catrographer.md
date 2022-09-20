@@ -60,11 +60,19 @@ Let's now explore the two fundamental resources that an operator deploys, Supply
 
 ###### Supply Chain: 
 
+With a ClusterSupplyChain, app operators describe which “shape of applications” they deal with (via spec.selector), and what series of resources are responsible for creating an artifact that delivers it (via spec.resources).
+
+Those Workloads that match spec.selector then go through the resources specified in spec.resources
+
 ```execute
 kubectl get clustersupplychain -n tap-install
 ```
 
-###### ClusterSourceTemplate
+###### ClusterSourceTemplate:
+
+ClusterSourceTemplate indicates how the supply chain could instantiate an object responsible for providing source code.
+
+The ClusterSourceTemplate requires definition of a urlPath and revisionPath. ClusterSourceTemplate will update its status to emit url and revision values, which are reflections of the values at the path on the created objects.
 
 ```execute
 kubectl get ClusterSourceTemplate -n tap-install
@@ -106,7 +114,11 @@ Runnable:
 kubectl get Runnable -n tap-install
 ```
 
-###### ClusterImageTemplate
+###### ClusterImageTemplate:
+
+ClusterImageTemplate instructs how the supply chain should instantiate an object responsible for supplying container images, for instance, one that takes source code, builds a container image out of it.
+
+The ClusterImageTemplate requires definition of an imagePath. ClusterImageTemplate will update its status to emit an image value, which is a reflection of the value at the path on the created object.
 
 ```execute
 kubectl get ClusterImageTemplate -n tap-install
@@ -118,7 +130,11 @@ ImageScan
 kubectl get ImageScan -n tap-install
 ```
 
-###### ClusterConfigTemplate
+###### ClusterConfigTemplate:
+
+Instructs the supply chain how to instantiate a Kubernetes object that knows how to make Kubernetes configurations available to further resources in the chain.
+
+The ClusterConfigTemplate requires definition of a configPath. ClusterConfigTemplate will update its status to emit a config value, which is a reflection of the value at the path on the created object.
 
 ```execute
 kubectl get ClusterConfigTemplate -n tap-install
@@ -129,7 +145,9 @@ convention-template:
 ```execute
 kubectl get podIntent -n tap-install
 ```
-###### ClusterTemplate
+###### ClusterTemplate:
+
+A ClusterTemplate instructs the supply chain to instantiate a Kubernetes object that has no outputs to be supplied to other objects in the chain, for instance, a resource that deploys a container image that has been built by other ancestor resources.
 
 ```execute
 kubectl get ClusterTemplate -n tap-install
@@ -139,7 +157,11 @@ kubectl get ClusterTemplate -n tap-install
 kubectl get deliverable -n tap-install
 ```
 
-###### ClusterRunTemplate
+###### ClusterRunTemplate:
+
+A ClusterRunTemplate defines how an immutable object should be stamped out based on data provided by a Runnable. ClusterRunTemplate differs from supply chain templates in many aspects:
+
+ClusterRunTemplate cannot be referenced directly by a ClusterSupplyChain object (it can only be reference by a Runnable)
 
 ```execute
 kubectl get ClusterRunTemplate -n tap-install
