@@ -1,5 +1,9 @@
 Sometimes an application isn't behaving quite like we'd expect after deployment, and we want to get more information about its runtime behavior, for diagnostics and troubleshooting. Is our application running out of memory? What was the response time for HTTP Requests?
 
+```dashboard:open-url
+url: http://partnertapdemo.tap-install.workshop.tap.captainvirtualization.in
+```
+
 Tanzu Application Platform provides Live View to help a developer like Cody gather that information. Let's take a look. We're going to access the Web UI known as TAP GUI, which can observe the deployment we just created:
 
 ```dashboard:open-url
