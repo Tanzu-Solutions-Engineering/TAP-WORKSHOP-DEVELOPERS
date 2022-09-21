@@ -34,19 +34,27 @@ command: tanzu.liveUpdateStart
 
 ![IDE app](images/IDE-2.png)
 
+###### List the applications in tap-install namespace
+
 ```execute
 tanzu apps workload list -n tap-install
 ```
 
+###### Get app details of {{ session_namespace }} in tap-install namespace
+
 ```execute
 tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
+
+Verify the application status and should be in ready state as shown below: 
 
 ```
 Knative Services
 NAME                 READY   URL
 tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.workshop.tap.captainvirtualization.in
 ```
+
+###### Access the application in a browser
 
 ```dashboard:open-url
 url: http://{{ session_namespace }}.tap-install.workshop.tap.captainvirtualization.in/
