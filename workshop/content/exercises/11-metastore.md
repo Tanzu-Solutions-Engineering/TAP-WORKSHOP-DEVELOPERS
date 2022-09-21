@@ -19,8 +19,14 @@ What packages and CVEs exist in a particular image? (image)
 What packages and CVEs exist in my source code? (source)
 
 What dependencies are affected by a specific CVE? (vulnerabilities)
-  
+
+```execute  
+tanzu insight config set-target https://metadata-store.captainvirtualization.in --ca-cert insight-ca.crt
+```
+
 ###### Add an image report
+
+Note: For this workshop, we have already included image-cve-report as part of the image. 
   
 ```execute  
 tanzu insight image add --cyclonedxtype xml --path image-cve-report
@@ -44,9 +50,8 @@ tanzu insight vuln images --cveid CVE-2020-16156
 tanzu insight package images --name perl-base
 ```
 
-###### List tha packages and images that a specific image contain: 
+###### List the packages and images that a specific image contain: 
 
 ```execute  
 tanzu insight image get --digest sha256:ab699d1caf2f36d55170f5570c30e28164039873384523a2ffc8b8cb3631ce3e
 ```
-  
