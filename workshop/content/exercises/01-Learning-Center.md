@@ -13,3 +13,31 @@ You'll see a lot more of Learning Center as we progress, but let's get comfortab
 ```execute
 source /opt/workshop/setup.d/01-terminal-init.sh
 ``` 
+
+```dashboard:open-url
+url: https://github.com/Eknathreddy09/tap-multi-user
+```
+
+```execute
+kubectl get trainingportal
+``` 
+
+```execute
+kubectl get workshop
+``` 
+
+```execute
+kubectl get workshopsessions
+``` 
+
+```execute
+kubectl get pods -n learningcenter
+```
+
+```execute
+kubectl get pods -n tap-demos-w01
+```
+
+```execute
+kubectl get pods -n tap-demos-w02
+```
