@@ -10,10 +10,10 @@ spec:
   vendor: vmware.com
   difficulty: beginner
   duration: 100m
-  url: https://github.com/dineshtripathi30/tap-workshop
+  url: https://github.com/Eknathreddy09/tap-multi-user
   content:
-    image: tanzudemoreg.azurecr.io/tapworkshop:v3
-    files: github.com/Tanzu-Partner-SE/tap-workshop-1?ref=multi-tenant
+    image: tanzupartnerworkshop.azurecr.io/tapworkshop:v2
+    files: github.com/Eknathreddy09/tap-multi-user?ref=main
     # image: #@ "harbor.{}/tanzu-e2e/inner-tap-workshop:latest".format(data.values.ingress.domain)
     # files: #@ "github.com/{}/tap-workshop?ref={}".format(data.values.git.account,data.values.git.branch)
   session:
@@ -23,11 +23,11 @@ spec:
       # - name: GITEA_PASSWORD
       #   value: #@ data.values.gitea.adminPassword
       - name: VIEW_CLUSTER_DOMAIN
-        value: tap11.tanzupartnerdemo.com
+        value: workshop.tap.captainvirtualization.in
       - name: TAP_REGISTRY_HOST
-        value: tanzudemoreg.azurecr.io
+        value: tanzupartnerworkshop.azurecr.io
       - name: ACC_SERVER_URL
-        value: https://accelerator.tap11.tanzupartnerdemo.com
+        value: https://accelerator.workshop.tap.captainvirtualization.in
       # - name: HARBOR_USER
       #   value: #@ data.values.harbor.user
       # - name: HARBOR_PASSWORD
