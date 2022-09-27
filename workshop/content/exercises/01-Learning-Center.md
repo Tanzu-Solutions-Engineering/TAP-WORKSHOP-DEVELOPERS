@@ -14,30 +14,62 @@ You'll see a lot more of Learning Center as we progress, but let's get comfortab
 source /opt/workshop/setup.d/01-terminal-init.sh
 ``` 
 
+Go through the below repository to understand the structure of md files designed for this workshop. Try to navigate through each directory:  
+
 ```dashboard:open-url
 url: https://github.com/Eknathreddy09/tap-multi-user
 ```
+
+You can find the content that you are seeing in the instructions sections from below given md files: 
+
+```dashboard:open-url
+https://github.com/Eknathreddy09/tap-multi-user/tree/main/workshop/content/exercises
+```
+
+Read through the below yaml file that is used to create this Training portal: 
+
+```execute
+cat ~/training-portal.yaml
+```
+
+Read through the below yaml file that is used to create this workshop: 
+
+```execute
+cat ~/workshop-multiuser.yaml
+```
+
+###### Check the trainingportal using below command, you can see the status as running for url that is currently being accessed for this workshop. 
 
 ```execute
 kubectl get trainingportal
 ``` 
 
+###### List the workshop with corresponding image and github url: 
+
 ```execute
 kubectl get workshop
 ``` 
+
+###### List the workshopsessions and you can see the name of your session ( {{ session_namespace }} ) too: 
 
 ```execute
 kubectl get workshopsessions
 ``` 
 
+###### List the pods in learningcenter namespace including the operator pod. 
+
 ```execute
 kubectl get pods -n learningcenter
 ```
 
-```execute
-kubectl get pods -n tap-demos-w01
-```
+###### List the pods under current workshop
 
 ```execute
 kubectl get pods -n tap-demos-w02
+```
+
+Refer to VMware docs to get more info about Learning center: 
+
+```dashboard:open-url
+url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-learning-center-about.html
 ```
