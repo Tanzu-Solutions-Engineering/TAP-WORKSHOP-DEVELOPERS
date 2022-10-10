@@ -23,7 +23,7 @@ kubectl config rename-context eduk8s tap12-aks-fullcluster
 
 export GIT_USERNAME=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.username' | base64 -d)
 export GIT_PASSWORD=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.password' | base64 -d)
-export GIT_HOST=gitea-tapdemo.captainvirtualization.in
+export GIT_HOST=gitea-tapdemo.tap.tanzupartnerdemo.com
 
 # Setup GIT for change commit
 git config --global user.email "$GIT_USERNAME@gitea.com"
