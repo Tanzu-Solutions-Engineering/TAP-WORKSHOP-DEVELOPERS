@@ -21,7 +21,7 @@ What packages and CVEs exist in my source code? (source)
 What dependencies are affected by a specific CVE? (vulnerabilities)
 
 ```execute  
-tanzu insight config set-target https://metadata-store.captainvirtualization.in --ca-cert insight-ca.crt
+tanzu insight config set-target https://metadata-store.tanzupartnerdemo.com --ca-cert insight-ca.crt
 ```
 
 ###### Add an image report
