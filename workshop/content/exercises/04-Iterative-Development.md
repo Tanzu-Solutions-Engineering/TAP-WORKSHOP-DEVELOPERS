@@ -28,13 +28,13 @@ At the bottom, you will see a working URL like this once the deployment is ready
 ```
 Knative Services
 NAME             READY   URL
-{{ session_namespace }}   Ready    http://{{ session_namespace }}.tap-install.workshop.tap.captainvirtualization.in
+{{ session_namespace }}   Ready    http://{{ session_namespace }}.tap-install.workshop.tap.tanzupartnerdemo.com
 ```
 
 Access the Application that is deployed
 
 ```dashboard:open-url
-url: http://{{ session_namespace }}.tap-install.workshop.tap.captainvirtualization.in
+url: http://{{ session_namespace }}.tap-install.workshop.tap.tanzupartnerdemo.com
 ```
 
 Click on the URL in the terminal window to view the application.
@@ -58,7 +58,7 @@ This code change will automatically trigger a patch to the running container. In
 If you want to stop an auto update, Click to run below command:
 
 ```dashboard:open-url
-url: http://tap-demos-w02-s001.tap-install.workshop.tap.captainvirtualization.in/
+url: http://tap-demos-w02-s001.tap-install.workshop.tap.tanzupartnerdemo.com/
 ```
 
 ```execute
@@ -72,7 +72,7 @@ tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
 Knative Services
 NAME                 READY   URL
-tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.workshop.tap.captainvirtualization.in
+tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.workshop.tap.tanzupartnerdemo.com
 ```
 
 ```editor:execute-command
