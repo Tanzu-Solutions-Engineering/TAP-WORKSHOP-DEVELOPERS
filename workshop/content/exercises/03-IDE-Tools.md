@@ -51,13 +51,13 @@ Verify the application status and should be in ready state as shown below:
 ```
 Knative Services
 NAME                 READY   URL
-tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.workshop.tap.tanzupartnerdemo.com
+tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.tanzupartnerdemo.com
 ```
 
 ###### Access the application in a browser
 
 ```dashboard:open-url
-url: http://{{ session_namespace }}.tap-install.workshop.tap.tanzupartnerdemo.com/
+url: http://{{ session_namespace }}.tap-install.tanzupartnerdemo.com/
 ```
 
 ![IDE app](images/IDE-1.png)
