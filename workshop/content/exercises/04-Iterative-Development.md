@@ -28,13 +28,13 @@ At the bottom, you will see a working URL like this once the deployment is ready
 ```
 Knative Services
 NAME             READY   URL
-{{ session_namespace }}   Ready    http://{{ session_namespace }}.tap-install.workshop.tap.tanzupartnerdemo.com
+{{ session_namespace }}   Ready    http://{{ session_namespace }}.tap-install.tanzupartnerdemo.com
 ```
 
 Access the Application that is deployed
 
 ```dashboard:open-url
-url: http://{{ session_namespace }}.tap-install.workshop.tap.tanzupartnerdemo.com
+url: http://{{ session_namespace }}.tap-install.tanzupartnerdemo.com
 ```
 
 Click on the URL in the terminal window to view the application.
@@ -58,7 +58,7 @@ This code change will automatically trigger a patch to the running container. In
 If you want to stop an auto update, Click to run below command:
 
 ```dashboard:open-url
-url: http://tap-demos-w02-s001.tap-install.workshop.tap.tanzupartnerdemo.com/
+url: http://tap-demos-w02-s001.tap-install.tanzupartnerdemo.com/
 ```
 
 ```execute
@@ -72,12 +72,11 @@ tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
 Knative Services
 NAME                 READY   URL
-tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.workshop.tap.tanzupartnerdemo.com
+tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.tanzupartnerdemo.com
 ```
 
 ```editor:execute-command
 command: tanzu.liveUpdateStop
 ```
-
 
 Now Cody the developer can hit the productivity zone. He can start coding on his next feature, and immediately see incremental results in his running container to keep driving in the right direction. Let's see what else Cody can do with Tanzu Application Platform.
