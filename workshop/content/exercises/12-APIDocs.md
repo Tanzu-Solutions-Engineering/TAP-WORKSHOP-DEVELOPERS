@@ -5,7 +5,7 @@ The API documentation plug-in provides a standalone list of APIs that can be con
 The API documentation plug-in is part of Tanzu Application Platform GUI.
 
 ```dashboard:open-url
-url: https://tap-gui.workshop.tap.captainvirtualization.in/catalog/default/api/demo-api
+url: https://tap-gui.workshop.tap.tanzupartnerdemo.com/catalog/default/api/demo-api
 ```
 
 ##### VMWare Docs - API Docs
