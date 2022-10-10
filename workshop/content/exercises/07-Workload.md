@@ -60,7 +60,7 @@ So let's review. Cody performed his development activities on the Iterate cluste
 Now, let's apply the workload and explore the supply chain which drives the deployment process.
 
 ```execute-1 
-tanzu apps workload create {{ session_namespace }}-a --git-repo https://gitea-tapdemo.tanzupartnerdemo.com/tapdemo-user/$REPO_NAME \
+tanzu apps workload create {{ session_namespace }}-a --git-repo https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/$REPO_NAME \
 --type web \
 --label app.kubernetes.io/part-of={{ session_namespace }}-a \
 --namespace tap-install \
@@ -77,11 +77,11 @@ At the bottom, you will see a working URL like this once the deployment is ready
 ```
 Knative Services
 NAME             READY   URL
-{{ session_namespace }}-a   Ready    http://{{ session_namespace }}-a.tap-install.workshop.tap.tanzupartnerdemo.com
+{{ session_namespace }}-a   Ready    http://{{ session_namespace }}-a.tap-install.tanzupartnerdemo.com
 ```
 
 Access the Application that is deployed
 
 ```dashboard:open-url
-url: http://{{ session_namespace }}-a.tap-install.workshop.tap.tanzupartnerdemo.com
+url: http://{{ session_namespace }}-a.tap-install.tanzupartnerdemo.com
 ```
