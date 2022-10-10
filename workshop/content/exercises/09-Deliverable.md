@@ -25,7 +25,7 @@ In this demo, **ArgoCD** is already deployed on a Kubernetes Cluster for the Git
 
 Open the ArgoCD UI to validate. Ask workshop administrator for the credentials.
 ```dashboard:open-url
-url: https://argocd.tap.captainvirtualization.in
+url: https://argocd.tap.tanzupartnerdemo.com
 ```
 
 Above application is configured to deploy in a separate namespace (usually it will be a separate TAP Run cluster). 
