@@ -9,7 +9,7 @@ envsubst < config > .kube/config
 
 envsubst < /home/eduk8s/install/rbac/app-editor.yaml | kubectl apply -f-
 
-echo "I am done"
+echo "I am done again"
 
 #export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
 
