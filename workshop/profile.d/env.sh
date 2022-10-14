@@ -3,7 +3,7 @@
 #printf %b "$KUBE_CONFIG" > config
 #envsubst < config > .kube/config
 
-kubectl apply -f /home/eduk8s/install/rbac/app-editor.yaml
+kubectl create rolebinding eduk8s-admin-binding --clusterrole=admin --serviceaccount=tap-demos-w02-s001:default --namespace tap-demos-w02-s001
 
 export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
 
