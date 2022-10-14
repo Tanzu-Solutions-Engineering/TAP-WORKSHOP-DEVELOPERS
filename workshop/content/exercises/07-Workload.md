@@ -72,6 +72,10 @@ tanzu apps workload create {{ session_namespace }}-a --git-repo https://gitea-ta
 tanzu apps workload get {{ session_namespace }}-a -n tap-install
 ```
 
+```execute
+tanzu apps workload apply {{ session_namespace }}-a --annotation autoscaling.knative.dev/minScale=1 -n tap-install
+```
+
 At the bottom, you will see a working URL like this once the deployment is ready:
 
 ```
