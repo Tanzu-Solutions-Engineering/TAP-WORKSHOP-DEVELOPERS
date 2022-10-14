@@ -1,3 +1,8 @@
+printf %b "$KUBE_CONFIG" > config
+envsubst < config > .kube/config
+
+envsubst < /home/eduk8s/install/rbac/app-editor.yaml | kubectl apply -f-
+
 export USERNAME1=`kubectl get secret registry-credentials -n tap-install -o json | jq '.data' | cut -f2 -d":"|tr -d \" | awk 'NR>1 && NR < 3'`
 
 export REGISTRY_USERNAME=$(echo $USERNAME1 | base64 -d | jq '.auths[].username' | tr -d '"')
