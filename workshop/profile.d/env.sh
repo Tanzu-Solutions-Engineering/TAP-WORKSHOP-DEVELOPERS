@@ -23,7 +23,7 @@ echo $REGISTRY_USERNAME
 
 # Rename eduk8s context to tap cluster name
 
-kubectl config rename-context eduk8s tap12-aks-fullcluster
+kubectl config rename-context eduk8s tap13-aks-fullcluster
 
 # Switch to default namespace
 kubectl config set-context --current --namespace default
