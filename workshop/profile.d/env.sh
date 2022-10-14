@@ -30,13 +30,13 @@ kubectl config set-context --current --namespace default
 
 # Get GITea Creds to push changes
 
-#export GIT_USERNAME=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.username' | base64 -d)
-#export GIT_PASSWORD=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.password' | base64 -d)
-#export GIT_HOST=gitea-tapdemo.tap.tanzupartnerdemo.com
+export GIT_USERNAME=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.username' | base64 -d)
+export GIT_PASSWORD=$(kubectl get secret gitea-secret -n tap-install -o json | jq -r '.data.password' | base64 -d)
+export GIT_HOST=gitea-tapdemo.tap.tanzupartnerdemo.com
 
 # Setup GIT for change commit
-#git config --global user.email "$GIT_USERNAME@gitea.com"
-#git config --global user.name $GIT_USERNAME
+git config --global user.email "$GIT_USERNAME@gitea.com"
+git config --global user.name $GIT_USERNAME
 
 
 # Other Variables
