@@ -1,30 +1,32 @@
-#echo "Hello from your Terminal"
-
 #printf %b "$KUBE_CONFIG" > config
 #envsubst < config > .kube/config
 
 #kubectl create rolebinding eduk8s-admin-binding --clusterrole=admin --serviceaccount=tap-demos-w02-s001:default --namespace tap-demos-w02-s001
 
-export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
+az login --service-principal -u 494f6413-e362-468c-a954-3046ab908b55 -p LGv8Q~fyleu1F5~IZwJ8dqXT7Dqou3xZ84H-dcZZ --tenant b39138ca-3cee-4b4a-a4d6-cd83d9dd62f0
 
-export REGISTRY_USERNAME=$(kubectl get secret registry-credentials -n tap-install -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzudemoreg.azurecr.io".username')
+az account set --subscription a3ac57b4-348f-471f-9938-9cf757e2d033
+
+az aks get-credentials --resource-group tap-workshop-hosting-cluster --name tap-workshop-hosting-cluster
+
+#export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
+
+#export REGISTRY_USERNAME=$(kubectl get secret registry-credentials -n tap-install -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzudemoreg.azurecr.io".username')
 
 echo $REGISTRY_USERNAME
 
-export REGISTRY_PASSWORD=$(kubectl get secret registry-credentials -n tap-install -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzudemoreg.azurecr.io".password')
-
-echo "I am from profile.d"
+#export REGISTRY_PASSWORD=$(kubectl get secret registry-credentials -n tap-install -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzudemoreg.azurecr.io".password')
 
 # Login to Docker Registry
 
-docker login $REGISTRY_HOST -u $REGISTRY_USERNAME -p $REGISTRY_PASSWORD
+#docker login $REGISTRY_HOST -u $REGISTRY_USERNAME -p $REGISTRY_PASSWORD
 
 # Rename eduk8s context to tap cluster name
 
-kubectl config rename-context eduk8s tap12-aks-fullcluster
+#kubectl config rename-context eduk8s tap12-aks-fullcluster
 
 # Switch to default namespace
-kubectl config set-context --current --namespace default
+#kubectl config set-context --current --namespace default
 
 # Get GITea Creds to push changes
 
@@ -39,10 +41,10 @@ kubectl config set-context --current --namespace default
 
 # Other Variables
 
-export ACC_SERVER_URL="https://accelerator.tap11.tanzupartnerdemo.com"
+export ACC_SERVER_URL="https://accelerator.workshop.tap.tanzupartnerdemo.com"
 
-export ARGOCD_USERNAME=admin
-export ARGOCD_PASSWORD=pwd
+#export ARGOCD_USERNAME=admin
+#export ARGOCD_PASSWORD=pwd
 
 clear
 
