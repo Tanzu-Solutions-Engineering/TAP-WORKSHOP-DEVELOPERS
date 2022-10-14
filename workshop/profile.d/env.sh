@@ -1,23 +1,30 @@
-#echo "Hello from your Terminal"
+echo "Hello from your Terminal"
 
-#export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
+printf %b "$KUBE_CONFIG" > config
+envsubst < config > .kube/config
 
-#export REGISTRY_USERNAME=$(kubectl get secret registry-credentials -n tap-install -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzudemoreg.azurecr.io".username')
+envsubst < /home/eduk8s/install/rbac/app-editor.yaml | kubectl apply -f-
 
-#echo $REGISTRY_USERNAME
+export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
 
-#export REGISTRY_PASSWORD=$(kubectl get secret registry-credentials -n tap-install -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzudemoreg.azurecr.io".password')
+export REGISTRY_USERNAME=$(kubectl get secret registry-credentials -n tap-install -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzudemoreg.azurecr.io".username')
+
+echo $REGISTRY_USERNAME
+
+export REGISTRY_PASSWORD=$(kubectl get secret registry-credentials -n tap-install -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzudemoreg.azurecr.io".password')
+
+echo "I am from profile.d"
 
 # Login to Docker Registry
 
-#docker login $REGISTRY_HOST -u $REGISTRY_USERNAME -p $REGISTRY_PASSWORD
+docker login $REGISTRY_HOST -u $REGISTRY_USERNAME -p $REGISTRY_PASSWORD
 
 # Rename eduk8s context to tap cluster name
 
-#kubectl config rename-context eduk8s tap12-aks-fullcluster
+kubectl config rename-context eduk8s tap12-aks-fullcluster
 
 # Switch to default namespace
-# kubectl config set-context --current --namespace default
+kubectl config set-context --current --namespace default
 
 # Get GITea Creds to push changes
 
@@ -32,12 +39,12 @@
 
 # Other Variables
 
-#export ACC_SERVER_URL="https://accelerator.tap11.tanzupartnerdemo.com"
+export ACC_SERVER_URL="https://accelerator.tap11.tanzupartnerdemo.com"
 
-#export ARGOCD_USERNAME=admin
-#export ARGOCD_PASSWORD=pwd
+export ARGOCD_USERNAME=admin
+export ARGOCD_PASSWORD=pwd
 
-#clear
+clear
 
 
-#exec bash
+exec bash
