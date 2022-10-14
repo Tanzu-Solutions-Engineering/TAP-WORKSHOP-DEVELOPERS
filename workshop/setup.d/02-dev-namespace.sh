@@ -9,6 +9,8 @@ envsubst < config > .kube/config
 
 envsubst < /home/eduk8s/install/rbac/app-editor.yaml | kubectl apply -f-
 
+echo "I am done"
+
 #export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
 
 #export REGISTRY_USERNAME=$(kubectl get secret registry-credentials -n tap-install -o json | jq -r '.data.".dockerconfigjson"' | base64 -d | jq -r '.auths."tanzupartnerworkshop.azurecr.io".username')
