@@ -1,9 +1,25 @@
 echo "Hello from your Terminal"
 
-printf %b "$KUBE_CONFIG" > config
-envsubst < config > .kube/config
+#printf %b "$KUBE_CONFIG" > config
+#envsubst < config > .kube/config
 
-envsubst < /home/eduk8s/install/rbac/app-editor.yaml | kubectl apply -f-
+#envsubst < /home/eduk8s/install/rbac/app-editor.yaml | kubectl apply -f-
+
+cat <<EOF | kubectl -n tap-install apply -f -
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: learningcenter-policy-app
+  namespace: tap-demos-w02-s001
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: Group
+    name: system:serviceaccounts:tap-demos-w02-s001
+EOF
 
 export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
 
