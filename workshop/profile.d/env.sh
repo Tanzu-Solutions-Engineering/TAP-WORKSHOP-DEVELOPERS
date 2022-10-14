@@ -3,7 +3,7 @@
 #printf %b "$KUBE_CONFIG" > config
 #envsubst < config > .kube/config
 
-kubectl create rolebinding eduk8s-admin-binding --clusterrole=admin --serviceaccount=tap-demos-w02-s001:default --namespace tap-demos-w02-s001
+#kubectl create rolebinding eduk8s-admin-binding --clusterrole=admin --serviceaccount=tap-demos-w02-s001:default --namespace tap-demos-w02-s001
 
 export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
 
