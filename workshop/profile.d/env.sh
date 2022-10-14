@@ -3,11 +3,11 @@
 
 #kubectl create rolebinding eduk8s-admin-binding --clusterrole=admin --serviceaccount=tap-demos-w02-s001:default --namespace tap-demos-w02-s001
 
-#az login --service-principal -u 494f6413-e362-468c-a954-3046ab908b55 -p LGv8Q~fyleu1F5~IZwJ8dqXT7Dqou3xZ84H-dcZZ --tenant b39138ca-3cee-4b4a-a4d6-cd83d9dd62f0
+#az login --service-principal -u  -p  --tenant b39138ca-3cee-4b4a-a4d6-cd83d9dd62f0
 
-#az account set --subscription a3ac57b4-348f-471f-9938-9cf757e2d033
+#az account set --subscription a3ac57b4-3
 
-#az aks get-credentials --resource-group tap-workshop-hosting-cluster --name tap-workshop-hosting-cluster
+#az aks get-credentials --resource-group tap-g-cluster --name tap-g-cluster
 
 #export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
 
@@ -43,8 +43,8 @@ git config --global user.name $GIT_USERNAME
 
 export ACC_SERVER_URL="https://accelerator.workshop.tap.tanzupartnerdemo.com"
 
-#export ARGOCD_USERNAME=admin
-#export ARGOCD_PASSWORD=pwd
+export ARGOCD_USERNAME=admin
+export ARGOCD_PASSWORD=pwd
 
 clear
 
