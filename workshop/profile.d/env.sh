@@ -3,11 +3,11 @@
 
 #kubectl create rolebinding eduk8s-admin-binding --clusterrole=admin --serviceaccount=tap-demos-w02-s001:default --namespace tap-demos-w02-s001
 
-az login --service-principal -u 494f6413-e362-468c-a954-3046ab908b55 -p LGv8Q~fyleu1F5~IZwJ8dqXT7Dqou3xZ84H-dcZZ --tenant b39138ca-3cee-4b4a-a4d6-cd83d9dd62f0
+#az login --service-principal -u 494f6413-e362-468c-a954-3046ab908b55 -p LGv8Q~fyleu1F5~IZwJ8dqXT7Dqou3xZ84H-dcZZ --tenant b39138ca-3cee-4b4a-a4d6-cd83d9dd62f0
 
-az account set --subscription a3ac57b4-348f-471f-9938-9cf757e2d033
+#az account set --subscription a3ac57b4-348f-471f-9938-9cf757e2d033
 
-az aks get-credentials --resource-group tap-workshop-hosting-cluster --name tap-workshop-hosting-cluster
+#az aks get-credentials --resource-group tap-workshop-hosting-cluster --name tap-workshop-hosting-cluster
 
 #export REGISTRY_HOST=tanzupartnerworkshop.azurecr.io
 
@@ -23,10 +23,10 @@ echo $REGISTRY_USERNAME
 
 # Rename eduk8s context to tap cluster name
 
-#kubectl config rename-context eduk8s tap12-aks-fullcluster
+kubectl config rename-context eduk8s tap12-aks-fullcluster
 
 # Switch to default namespace
-#kubectl config set-context --current --namespace default
+kubectl config set-context --current --namespace default
 
 # Get GITea Creds to push changes
 
