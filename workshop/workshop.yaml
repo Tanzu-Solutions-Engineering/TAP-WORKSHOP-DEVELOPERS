@@ -16,7 +16,7 @@ modules:
     - exercises/11-metastore
     - exercises/12-APIDocs
     - exercises/13-TechDocs
-    - exercises/14-security-analysis
+    - exercises/14-Security-Analysis
     - workshop-summary
     vars:
     - name: harbor_project_id
