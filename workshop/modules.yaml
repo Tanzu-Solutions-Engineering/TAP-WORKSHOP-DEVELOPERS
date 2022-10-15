@@ -40,6 +40,9 @@ modules:
         exit_sign: TechDocs
     exercises/13-TechDocs:
         name: TechDocs
+        exit_sign: Security Analysis
+    exercises/14-security-analysis:
+        name: Security Analysis
         exit_sign: Conclusion
     workshop-summary:
         name: Workshop Summary
