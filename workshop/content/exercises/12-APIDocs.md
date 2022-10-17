@@ -11,7 +11,7 @@ url: https://tap-gui.workshop.tap.tanzupartnerdemo.com/catalog/default/api/demo-
 ##### VMWare Docs - API Docs
 
 ```dashboard:open-url
-url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-tap-gui-plugins-api-docs.html
+url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-tap-gui-plugins-api-docs.html
 ```
 
 ##### Supported API Formats: 
