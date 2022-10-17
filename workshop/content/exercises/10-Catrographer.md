@@ -140,11 +140,6 @@ The ClusterConfigTemplate requires definition of a configPath. ClusterConfigTemp
 kubectl get ClusterConfigTemplate -n tap-install
 ```
 
-convention-template:
-
-```execute
-kubectl get podIntent -n tap-install
-```
 ###### ClusterTemplate:
 
 A ClusterTemplate instructs the supply chain to instantiate a Kubernetes object that has no outputs to be supplied to other objects in the chain, for instance, a resource that deploys a container image that has been built by other ancestor resources.
