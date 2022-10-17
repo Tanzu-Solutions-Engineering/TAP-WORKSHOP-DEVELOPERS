@@ -17,6 +17,7 @@ modules:
     - exercises/12-APIDocs
     - exercises/13-TechDocs
     - exercises/14-Security-Analysis
+    - exercises/15-cleanup
     - workshop-summary
     vars:
     - name: harbor_project_id
