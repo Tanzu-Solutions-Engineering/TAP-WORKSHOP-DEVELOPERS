@@ -30,5 +30,5 @@ Click on deployed app tap-demos-w02-s001 by navigating to url
 https://tap-gui.workshop.tap.tanzupartnerdemo.com/supply-chain/host/tap-install/tap-demos-w02-s001/source-scanner
 
 
-
+Image: SA -3
 
