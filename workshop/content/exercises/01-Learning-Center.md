@@ -71,5 +71,5 @@ kubectl get pods -n tap-demos-w02
 Refer to VMware docs to get more info about Learning center: 
 
 ```dashboard:open-url
-url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-learning-center-about.html
+url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-learning-center-about.html
 ```
