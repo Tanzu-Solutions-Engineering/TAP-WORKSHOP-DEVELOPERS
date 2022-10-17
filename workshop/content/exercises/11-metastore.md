@@ -7,7 +7,7 @@ Supply Chain Security Tools - Store saves software bills of materials (SBoMs) to
 The Tanzu Insight CLI plug-in is the primary way to view results from the Supply Chain Security Tools - Scan of source code and image files. Use it to query by source code commit, image digest, and CVE identifier to understand security risks.
 
 ```dashboard:open-url
-url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-scst-store-install-scst-store.html
+url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-scst-store-install-scst-store.html
 ```
 
 ###### Supported use cases: 
