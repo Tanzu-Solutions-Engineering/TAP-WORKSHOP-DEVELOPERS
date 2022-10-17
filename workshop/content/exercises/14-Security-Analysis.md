@@ -5,11 +5,11 @@ The Security Analysis plug-in is part of the Tanzu Application Platform Full and
 
 The Security Analysis plug-in is always accessible from the left navigation panel. Click the Security Analysis button to open the Security Analysis dashboard.
 
-```
+```dashboard:open-url
 url: https://tap-gui.workshop.tap.tanzupartnerdemo.com/security-analysis
 ```
 
-Image : SA-1
+![Security Analysis](images/SA-1.png)
 
 Viewing vulnerability data
 The Security Analysis dashboard provides a summary of all vulnerabilities across all clusters for single-cluster and multi-cluster deployments.
@@ -23,12 +23,18 @@ Note: The sum includes any CVEs on the allowlist (ignoreCVEs).
 Viewing CVE and package details
 The Security Analysis plug-in has a CVE page and a Package page. These are accessed by clicking on a workload name, which opens the Supply Chain Choregrapher plug-in. Clicking on the CVE or Package name opens the CVE or Package page, respectively.
 
-Image :  SA-2
+![Security Analysis](images/SA-2.png)
 
-Click on deployed app tap-demos-w02-s001 by navigating to url
+Click on deployed app {{ session_namespace }} by navigating to url
 
-https://tap-gui.workshop.tap.tanzupartnerdemo.com/supply-chain/host/tap-install/tap-demos-w02-s001/source-scanner
+```dashboard:open-url
+https://tap-gui.workshop.tap.tanzupartnerdemo.com/supply-chain/host/tap-install/{{ session_namespace }}/source-scanner
+```
+
+![Security Analysis](images/SA-3.png)
 
 
-Image: SA -3
+![Security Analysis](images/SA-4.png)
 
+
+![Security Analysis](images/SA-5.png)
