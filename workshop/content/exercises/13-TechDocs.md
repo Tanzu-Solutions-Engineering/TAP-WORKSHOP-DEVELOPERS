@@ -10,7 +10,7 @@ url: https://tap-gui.workshop.tap.tanzupartnerdemo.com/docs/default/component/ta
 ###### TechDocs plugin - VMware Docs
 
 ```dashboard:open-url
-url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-tap-gui-techdocs-usage.html
+url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-tap-gui-techdocs-usage.html
 ```
 
 ###### Architecture - TechDocs
