@@ -58,7 +58,7 @@ This code change will automatically trigger a patch to the running container. In
 If you want to stop an auto update, Click to run below command:
 
 ```dashboard:open-url
-url: http://tap-demos-w02-s001.tap-install.tanzupartnerdemo.com/
+url: http://{{ session_namespace }}.tap-install.tanzupartnerdemo.com/
 ```
 
 ```execute
@@ -72,7 +72,7 @@ tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
 Knative Services
 NAME                 READY   URL
-tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.tanzupartnerdemo.com
+{{ session_namespace }}   Ready   http://{{ session_namespace }}.tap-install.tanzupartnerdemo.com
 ```
 
 ```editor:execute-command
