@@ -43,6 +43,9 @@ modules:
         exit_sign: Security Analysis
     exercises/14-security-analysis:
         name: Security Analysis
+        exit_sign: Cleanup
+    exercises/15-cleanup:
+        name: Cleanup
         exit_sign: Conclusion
     workshop-summary:
         name: Workshop Summary
