@@ -51,7 +51,7 @@ Verify the application status and should be in ready state as shown below:
 ```
 Knative Services
 NAME                 READY   URL
-tap-demos-w02-s001   Ready   http://tap-demos-w02-s001.tap-install.tanzupartnerdemo.com
+{{ session_namespace }}   Ready   http://{{ session_namespace }}.tap-install.tanzupartnerdemo.com
 ```
 
 ###### Access the application in a browser
