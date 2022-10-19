@@ -14,14 +14,25 @@ url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-s
 
 The following are a few use cases supported by the CLI:
 
-What packages and CVEs exist in a particular image? (image)
+ - What packages and CVEs exist in a particular image? (image)
  
-What packages and CVEs exist in my source code? (source)
+ - What packages and CVEs exist in my source code? (source)
 
-What dependencies are affected by a specific CVE? (vulnerabilities)
+ - What dependencies are affected by a specific CVE? (vulnerabilities)
+
+
+When using an Ingress setup, the Store creates a specific TLS Certificate for HTTPS communications under the metadata-store namespace.
+
+###### To get a certificate, run:
 
 ```execute  
-tanzu insight config set-target https://metadata-store.tanzupartnerdemo.com --ca-cert insight-ca.crt
+kubectl get secret ingress-cert -n metadata-store -o json | jq -r '.data."ca.crt"' | base64 -d > insight-ca-new.crt
+```
+
+###### Set the target by running:
+
+```execute  
+tanzu insight config set-target https://metadata-store.tanzupartnerdemo.com --ca-cert insight-ca-new.crt
 ```
 
 ###### Add an image report
