@@ -68,9 +68,13 @@ tanzu apps workload create {{ session_namespace }}-a --git-repo https://gitea-ta
 --git-branch main --yes
 ```
 
+###### Get the workload details of {{ session_namespace }}-a
+
 ```execute-2 
 tanzu apps workload get {{ session_namespace }}-a -n tap-install
 ```
+
+###### Apply the annotation on workload {{ session_namespace }}-a 
 
 ```execute
 tanzu apps workload apply {{ session_namespace }}-a --annotation autoscaling.knative.dev/minScale=1 -n tap-install -y
