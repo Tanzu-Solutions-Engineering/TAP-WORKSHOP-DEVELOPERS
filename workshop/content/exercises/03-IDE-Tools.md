@@ -46,6 +46,8 @@ tanzu apps workload list -n tap-install
 tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
 
+**Note**: The Tiltfile script is going to deploy our application into our development environment, and it will take about 2.5 minutes to run to completion the first time. But don't worry! It is setting us up to run iterative deployments that will be much, much faster.
+
 Verify the application status and should be in ready state as shown below: 
 
 ```
@@ -62,4 +64,3 @@ url: http://{{ session_namespace }}.tap-install.tanzupartnerdemo.com/
 
 ![IDE app](images/IDE-1.png)
 
-The Tiltfile script is going to deploy our application into our development environment, and it will take about 2.5 minutes to run to completion the first time. But don't worry! It is setting us up to run iterative deployments that will be much, much faster.
