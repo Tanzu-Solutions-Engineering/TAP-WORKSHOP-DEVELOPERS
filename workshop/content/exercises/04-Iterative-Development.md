@@ -19,26 +19,6 @@ Our development environment is a Kubernetes cluster, and so Tanzu Application Pl
 
 Tilt lets us make updates to our running application in seconds. Let's see how it works. We'll use the Tanzu command line to make sure that our initial deployment is ready:
 
-```execute-2 
-tanzu apps workload get {{ session_namespace }} -n tap-install
-```
-
-At the bottom, you will see a working URL like this once the deployment is ready:
-
-```
-Knative Services
-NAME             READY   URL
-{{ session_namespace }}   Ready    http://{{ session_namespace }}.tap-install.tanzupartnerdemo.com
-```
-
-Access the Application that is deployed
-
-```dashboard:open-url
-url: http://{{ session_namespace }}.tap-install.tanzupartnerdemo.com
-```
-
-Click on the URL in the terminal window to view the application.
-
 Now, let's make code changes. The banner text currently reads "Spring Sensors". Let's change the banner to something else:
 
 ```editor:select-matching-text
