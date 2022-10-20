@@ -41,7 +41,7 @@ modules:
     exercises/13-TechDocs:
         name: TechDocs
         exit_sign: Security Analysis
-    exercises/14-security-analysis:
+    exercises/14-Security-Analysis:
         name: Security Analysis
         exit_sign: Cleanup
     exercises/15-cleanup:
