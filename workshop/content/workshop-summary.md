@@ -13,3 +13,13 @@ Want to have more time to take your learning further?  Download and install [Tan
 **Tanzu Community Edition** is the free, community-supported, open-source distribution of VMware Tanzu.  It includes a Kubernetes distribution and the **Tanzu Application Toolkit**.  The Tanzu Application Toolkit contains the components needed to orchestrate workload deployments using [Cartographer](https://github.com/vmware-tanzu/cartographer).  You get container image build services provided by [kpack](https://buildpacks.io/docs/tools/kpack/.  And the toolkit includes services to run your workloads using [Knative Serving](https://knative.dev/docs/serving/).
 
 [Tanzu Application Platform](https://tanzu.vmware.com/application-platform) is a software subscription that includes the Application Accelerator, the Learning Center, the Tanzu Application Platform GUI, and  supply chains with integrated container image vulnerability scanning.  You can contact us for a trial of the Tanzu Application Platform by filling out the form at the bottom of the [Tanzu Application Platform](https://tanzu.vmware.com/application-platform) landing page.
+
+
+![Thanks](exercises/images/thanks-1.png)
+
+
+###### Please provide Feedback: 
+
+```dashboard:open-url
+url: https://forms.gle/szQ5hRzS2CqJhHpC6
+```
