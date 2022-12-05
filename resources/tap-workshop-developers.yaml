@@ -10,10 +10,10 @@ spec:
   vendor: vmware.com
   difficulty: beginner
   duration: 100m
-  url: https://github.com/Eknathreddy09/tap-multi-user
+  url: https://github.com/Tanzu-Partner-SE/TAP-WORKSHOP-DEVELOPERS
   content:
     image: tanzupartnerworkshop.azurecr.io/tapworkshop:v4
-    files: github.com/Eknathreddy09/tap-multi-user?ref=main
+    files: https://<githubtoken>:x-oauth-basic@github.com/Tanzu-Partner-SE/TAP-WORKSHOP-DEVELOPERS/tarball/main?path=--anchored
   session:
     resources:
       memory: 3Gi
