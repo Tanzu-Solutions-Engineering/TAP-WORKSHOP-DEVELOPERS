@@ -1,7 +1,7 @@
 apiVersion: learningcenter.tanzu.vmware.com/v1beta1
 kind: TrainingPortal
 metadata:
-  name: tap-demos
+  name: partnerworkshop-evoila
   annotations:
     kapp.k14s.io/update-strategy: always-replace
 spec:
