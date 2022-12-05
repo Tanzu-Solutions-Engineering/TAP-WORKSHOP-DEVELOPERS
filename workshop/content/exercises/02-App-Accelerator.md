@@ -31,7 +31,7 @@ tanzu accelerator list
 ###### Use below command to view the details of created Accelerator:
 
 ```execute
-tanzu accelerator get tap-demos-w02-s001
+tanzu accelerator get {{ session_namespace }}
 ```
 
 Let's work with the Spring project template. Press the choose button in the tile for `{{ session_namespace }}` accelerator. The UI will offer some optional parameters for customizing the project template, you can accept the defaults and hit **Next**. You'll then be prompted to review your choices, and you can press **Generate Accelerator**.
