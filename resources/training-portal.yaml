@@ -7,22 +7,22 @@ metadata:
 spec:
   portal:
     title: Tanzu Application Platform Demos
-    password: VMware1!
+    password: tapworkshop1!
     registration:
       type: anonymous
       enabled: true
     updates:
       workshop: true
     sessions:
-      maximum: 10
+      maximum: 45
   workshops:
-    - name: tap-overview
-      expires: 500m
-      orphaned: 60m
-      capacity: 20
+    - name: tapworkshop-developers
+      expires: 360m
+      orphaned: 120m
+      capacity: 45
       reserved: 2
-    - name: tap-overview-multi-tenant
-      expires: 500m
-      orphaned: 60m
-      capacity: 10
-      reserved: 0
+    - name: tapworkshop-operators
+      expires: 360m
+      orphaned: 120m
+      capacity: 20
+      reserved: 1
