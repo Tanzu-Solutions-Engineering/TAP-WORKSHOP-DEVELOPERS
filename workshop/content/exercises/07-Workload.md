@@ -80,6 +80,14 @@ tanzu apps workload get {{ session_namespace }}-a -n tap-install
 tanzu apps workload apply {{ session_namespace }}-a --annotation autoscaling.knative.dev/minScale=1 -n tap-install -y
 ```
 
+###### Get the workload details of {{ session_namespace }}-a
+
+```execute-2 
+tanzu apps workload get {{ session_namespace }}-a -n tap-install
+```
+
+Note: Wait for the Application {{ session_namespace }}-a to turn into ready state as shown below: 
+
 At the bottom, you will see a working URL like this once the deployment is ready:
 
 ```
