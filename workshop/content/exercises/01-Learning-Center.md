@@ -65,7 +65,7 @@ kubectl get pods -n learningcenter
 ###### List the pods under current workshop
 
 ```execute
-kubectl get pods -n tap-demos-w01
+kubectl get pods -n partnerworkshop-evoila-w01
 ```
 
 Refer to VMware docs to get more info about Learning center: 
