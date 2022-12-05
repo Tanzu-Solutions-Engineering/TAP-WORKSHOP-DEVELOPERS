@@ -1,0 +1,351 @@
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s001-workshop
+  namespace: tap-demos-w01-s001
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s001 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s002-workshop
+  namespace: tap-demos-w01-s002
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s002 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s003-workshop
+  namespace: tap-demos-w01-s003
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s003 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s004-workshop
+  namespace: tap-demos-w01-s004
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s004 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s005-workshop
+  namespace: tap-demos-w01-s005
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s005 # Nme is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s006-workshop
+  namespace: tap-demos-w01-s006
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s006 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s007-workshop
+  namespace: tap-demos-w01-s007
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s007 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s008-workshop
+  namespace: tap-demos-w01-s008
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s008 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s009-workshop
+  namespace: tap-demos-w01-s009
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s009 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s010-workshop
+  namespace: tap-demos-w01-s010
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s010 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s011-workshop
+  namespace: tap-demos-w01-s011
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s011 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s012-workshop
+  namespace: tap-demos-w01-s012
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s012 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s013-workshop
+  namespace: tap-demos-w01-s013
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s013 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s014-workshop
+  namespace: tap-demos-w01-s014
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s014 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s015-workshop
+  namespace: tap-demos-w01-s015
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s015 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s016-workshop
+  namespace: tap-demos-w01-s016
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s016 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s017-workshop
+  namespace: tap-demos-w01-s017
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s017 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s018-workshop
+  namespace: tap-demos-w01-s018
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s018 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s019-workshop
+  namespace: tap-demos-w01-s019
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s019 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s020-workshop
+  namespace: tap-demos-w01-s020
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s020 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
+metadata:
+  name: tap-demos-w01-s021-workshop
+  namespace: tap-demos-w01-s021
+subjects:
+- kind: ServiceAccount
+  name: tap-demos-w01-s021 # Name is case sensitive
+  namespace: tap-demos-w01
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
