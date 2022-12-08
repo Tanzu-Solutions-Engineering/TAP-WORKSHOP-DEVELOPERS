@@ -4,7 +4,7 @@ Cody the developer has committed his application source code to Git. Now, he wil
 
 Alana manages another Kubernetes cluster known as the Build cluster. This is a centralized environment where container images are built, security scans are applied, and deployment conventions are enforced for target environments, such as QA/Staging/Prod, where the application will run.
 
-To begin scheduling builds for Cody's application, Alana will create a **Workload** resource on the Build cluster. The Workload watches the repo where Cody's application lives, and identifies the rules that will be used to build and deploy that applcation. Let's look at the Workload resource that Alana will create.
+To begin scheduling builds for Cody's application, Alana will create a **Workload** resource on the Build cluster. The Workload watches the repo where Cody's application lives, and identifies the rules that will be used to build and deploy that application. Let's look at the Workload resource that Alana will create.
 
 ```editor:open-file
 file: /home/eduk8s/{{ session_namespace }}/config/workload.yaml
