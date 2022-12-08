@@ -30,7 +30,7 @@ modules:
         name: Deliverable
         exit_sign: Catrographer
     exercises/10-Catrographer:
-        name: Catrographer
+        name: Cartographer
         exit_sign: metastore
     exercises/11-metastore:
         name: metastore
