@@ -12,7 +12,7 @@ Just as we created a **Workload** resource on the Build cluster to generate the 
 file: /home/eduk8s/{{ session_namespace }}/deliverable.yaml
 ```
 
-The deliverables are simple, they just contain identifiers for the application, and a reference to the same GitOps repo or an Image repo where they supply chain outputted to.
+The deliverables are simple, they just contain identifiers for the application, and a reference to the same GitOps repo or an Image repo where the supply chain outputted to.
 
 You know the drill by now: Alana isn't going to log directly into the Run clusters to create the deliverable. She will write the Deliverable to a GitOps repo, which will be synced to the Run cluster. Nobody ever has to directly access a sensitive environment like Production to schedule a deployment!
 
