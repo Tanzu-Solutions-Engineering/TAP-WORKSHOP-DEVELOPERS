@@ -17,13 +17,13 @@ source /opt/workshop/setup.d/01-terminal-init.sh
 Go through the below repository to understand the structure of md files designed for this workshop. Try to navigate through each directory:  
 
 ```dashboard:open-url
-url: https://github.com/Eknathreddy09/tap-multi-user
+url: https://github.com/Tanzu-Partner-SE/TAP-WORKSHOP-DEVELOPERS
 ```
 
 You can find the content that you are seeing in the instructions sections from below given md files: 
 
 ```dashboard:open-url
-url: https://github.com/Eknathreddy09/tap-multi-user/tree/main/workshop/content/exercises
+url: https://github.com/Tanzu-Partner-SE/TAP-WORKSHOP-DEVELOPERS/tree/main/workshop/content/exercises
 ```
 
 Read through the below yaml file that is used to create this Training portal: 
