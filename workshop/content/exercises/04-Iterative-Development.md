@@ -23,7 +23,7 @@ Now, let's make code changes. The banner text currently reads "Spring Sensors". 
 
 ```editor:select-matching-text
 file: {{ session_namespace }}/src/main/java/com/partnertapdemo/partnertapdemo/HelloController.java
-text: "Welcome to the TAP Demo by Tanzu Partner SE Team"
+text: "Welcome to the TAP Workshop by Tanzu Partner SE Team"
 ```
 
 You can replace the selected text by typing in the code editor, or automatically apply a replacement string by clicking below:
