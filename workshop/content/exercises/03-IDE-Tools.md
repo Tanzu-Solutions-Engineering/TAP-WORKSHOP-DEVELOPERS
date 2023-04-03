@@ -19,6 +19,32 @@ file: /home/eduk8s/{{ session_namespace }}/src/main/java/com/partnertapdemo/part
 With Learning Center, we are using the embedded Coder dev environment that runs in your browser. Of course, you can also code on your local machine using supported IDEs like Visual Studio Code and IntelliJ IDEA. Your scaffold code contains a **workload.yaml** file that can be used to deploy workload from VSCode with a single click. Look at the screenshot below:
 
 ![workload-apply](images/tap-workload-apply.png)
+Now, let's change the label in the template file to add the workload as part of the partnertapdemo catalog. 
+
+```editor:select-matching-text
+file: {{ session_namespace }}/config/workload.yaml
+text: "app.kubernetes.io/part-of: {{ session_namespace }}"
+```
+
+You can replace the selected text by typing in the code editor, or automatically apply a replacement string by clicking below:
+
+```editor:replace-text-selection
+file: {{ session_namespace }}/config/workload.yaml
+text: "app.kubernetes.io/part-of: partnertapdemo"
+```
+Also, let's change the git url in the template file to your gitrepo. 
+
+```editor:select-matching-text
+file: {{ session_namespace }}/config/workload.yaml
+text: "https://github.com/Eknathreddy09/{{ session_namespace }}-app"
+```
+
+You can replace the selected text by typing in the code editor, or automatically apply a replacement string by clicking below:
+
+```editor:replace-text-selection
+file: {{ session_namespace }}/config/workload.yaml
+text: "https://github.com/Eknathreddy09/partnertapdemo-app"
+```
 
 But, Let's use another Developer Tooling in Tanzu Application Platform to run the application.
 
